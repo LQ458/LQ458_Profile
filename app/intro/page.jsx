@@ -27,7 +27,7 @@ const Intro = () => {
       suggestion: suggestion,
       note: note
     });
-    setMessage(response.data.message);
+    console.log("Message successfully sent")
     setLoading(false);
   } catch (error) {
       setLoading(false);
@@ -44,22 +44,25 @@ const Intro = () => {
   transition={{
     ease: "linear",
     duration: 2,
-    x: { duration: 1 }
+    x: { duration: 2 }
   }}>       
+  <div className='icon-container'>
   <IonIcon
             icon={person}
             style={{ fontSize: "4rem", }}
             className='icon'
           />
+          </div>
           <div className="Content">LQ458 Profile</div>
+          <motion.a className="cn" href="/404"whileHover={{ scale: 1.2 }}>中文版网站/Chinese Version</motion.a>
       </motion.div>
 
       <div className="background-shapes">
         <motion.div animate={{ y: -30 }}
   transition={{
     ease: "linear",
-    duration: 2,
-    y: { duration: 1 }
+    duration: 1,
+    y: { duration: 2 }
   }}>
       <IonIcon
             icon={logoGithub}
@@ -69,8 +72,8 @@ const Intro = () => {
           <motion.div animate={{ y: -50 }}
   transition={{
     ease: "linear",
-    duration: 2,
-    y: { duration: 1 }
+    duration: 1,
+    y: { duration: 2 }
   }}>
             <IonIcon
             icon={logoNodejs}
@@ -81,8 +84,8 @@ const Intro = () => {
           <motion.div animate={{ y: -70 }}
   transition={{
     ease: "linear",
-    duration: 2,
-    y: { duration: 1 }
+    duration: 1,
+    y: { duration: 2 }
   }}>
             <IonIcon
             icon={logoCss3}
@@ -93,8 +96,8 @@ const Intro = () => {
         <motion.div animate={{ y: -90 }}
   transition={{
     ease: "linear",
-    duration: 2,
-    y: { duration: 1 }
+    duration: 1,
+    y: { duration: 2 }
   }}>
             <IonIcon
             icon={logoHtml5}
@@ -106,8 +109,8 @@ const Intro = () => {
           <motion.div animate={{ y: -70 }}
   transition={{
     ease: "linear",
-    duration: 2,
-    y: { duration: 1 }}}>
+    duration: 1,
+    y: { duration: 2 }}}>
             <IonIcon
             icon={logoVue}
             style={{ fontSize: "4rem", color: "#ed00c5"}}
@@ -117,8 +120,8 @@ const Intro = () => {
           <motion.div animate={{ y: -50 }}
   transition={{
     ease: "linear",
-    duration: 2,
-    y: { duration: 1 }}}>
+    duration: 1,
+    y: { duration: 2 }}}>
     <IonIcon
             icon={logoPython}
             style={{ fontSize: "4rem", color: "#6aefee"}}
@@ -127,8 +130,8 @@ const Intro = () => {
           <motion.div animate={{ y: -30 }}
   transition={{
     ease: "linear",
-    duration: 2,
-    y: { duration: 1 }}}>
+    duration: 1,
+    y: { duration: 2 }}}>
         <IonIcon
             icon={logoReact}
             style={{ fontSize: "4rem", color: "#ed00c5"}}
@@ -138,8 +141,8 @@ const Intro = () => {
           <motion.div animate={{ y: -50 }}
   transition={{
     ease: "linear",
-    duration: 2,
-    y: { duration: 1 }}}>
+    duration: 1,
+    y: { duration: 2 }}}>
         <IonIcon
             icon={logoVercel}
             style={{ fontSize: "4rem", color: "#6aefee"}}
@@ -149,8 +152,8 @@ const Intro = () => {
           <motion.div animate={{ y: -70 }}
   transition={{
     ease: "linear",
-    duration: 2,
-    y: { duration: 1 }}}>
+    duration: 1,
+    y: { duration: 2 }}}>
             <IonIcon
             icon={logoAngular}
             style={{ fontSize: "4rem", color: "#ed00c5"}}
@@ -160,8 +163,8 @@ const Intro = () => {
           <motion.div animate={{ y: -90 }}
   transition={{
     ease: "linear",
-    duration: 2,
-    y: { duration: 1 }}}>
+    duration: 1,
+    y: { duration: 2 }}}>
         <IonIcon
             icon={logoJavascript}
             style={{ fontSize: "4rem", color: "#6aefee"}}
@@ -172,77 +175,79 @@ const Intro = () => {
 
       <div className="link-grid">
         <motion.a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          href="https://github.com/LQ458"
           className="link-item"
           animate={{ x: 415 }}
   transition={{
     ease: "linear",
-    x: { duration: 3.5 }}}
+    x: { duration: 3 }}}
           whileHover={{ scale: 1.1 }}
     whileTap={{ scale: 0.9 }}
         >
-          <h2 className="link-title">Docs</h2>
-          <p className="link-description">Find in-depth information about Next.js features and API.</p>
+          <h2 className="link-title">My Github</h2>
+          <p className="link-description">Find me through github by clicking this tab (LQ458).</p>
         </motion.a>
 
         <motion.a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          href="/notes"
           className="link-item"
           whileHover={{ scale: 1.1 }}
     whileTap={{ scale: 0.9 }}
     animate={{ y: 270 }}
   transition={{
     ease: "linear",
-    y: { duration: 3.5 }}}
+    y: { duration: 3 }}}
         >
-          <h2 className="link-title">Doc</h2>
-          <p className="link-description">Find in-depth information about Next.js features and API.</p>
+          <h2 className="link-title">LQ Notes</h2>
+          <p className="link-description">Find in-depth information about me and my studing notes.</p>
         </motion.a>
 
         <motion.a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          href="/news"
           className="link-item"
           whileHover={{ scale: 1.1 }}
     whileTap={{ scale: 0.9 }}
     animate={{ y: 270 }}
   transition={{
     ease: "linear",
-    y: { duration: 3.5 }}}
+    y: { duration: 3 }}}
         >
-          <h2 className="link-title">Do</h2>
-          <p className="link-description">Find in-depth information about Next.js features and API.</p>
+          <h2 className="link-title">News</h2>
+          <p className="link-description">Always catch up with my latest projects and development news.</p>
         </motion.a>
 
         <motion.a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          href="/life"
           className="link-item"
           whileHover={{ scale: 1.1 }}
     whileTap={{ scale: 0.9 }}
     animate={{ x: -415 }}
   transition={{
     ease: "linear",
-    x: { duration: 3.5 }}}
+    x: { duration: 3 }}}
         >
-          <h2 className="link-title">D</h2>
-          <p className="link-description">Find in-depth information about Next.js features and API.</p>
+          <h2 className="link-title">LQ Life</h2>
+          <p className="link-description">Find more interesting aspects about me in this block.</p>
         </motion.a>
       </div>
       <footer>
         <motion.div>
-        <form onSubmit={handleSubmit}>
-              <h2 className="msg">Contact Me:</h2>
+        <form onSubmit={handleSubmit} id="inputform">
+              <div className='block'></div>
               <div className="inputbox">
                 <input
                   type="name"
                   onChange={(e) => setName(e.target.value)}
-                  placeholder='Your Name*'
+                  placeholder='Your Name'
+                  className='inp'
                 />
               </div>
               <div className="inputbox">
                 <input
                   type="email"
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder='Your Email*'
+                  placeholder='Your Email'
+                  className='inp'
                 />
               </div>
               <div className="inputbox">
@@ -250,7 +255,8 @@ const Intro = () => {
                   type="suggestion"
                   onChange={(e) => setSuggestion(e.target.value)}
                   required
-                  placeholder='What Can I help You With?'
+                  placeholder='Any Problems?*'
+                  className='inp'
                 />
               </div>
               <div className="inputbox">
@@ -258,18 +264,21 @@ const Intro = () => {
                   type="note"
                   onChange={(e) => setNote(e.target.value)}
                   required
-                  placeholder='Leave a Message...'
+                  placeholder='Leave a Message...*'
+                  className='inp'
                 />
               </div>
+              <div className='sbtn'>
               <button type="submit" className='sub' disabled={loading}>
               {loading && (
-    <>
-      <TailSpin type="ThreeDots" color="black" height={20} width={40} style={{ marginRight: '5px' }} />
-      <span>Loading...</span>
-    </>
+    <div className='loader'>
+      <TailSpin type="ThreeDots" color="#431f82" height={30} width={50} />
+      <p>Loading...</p>
+    </div>
   )}
   {!loading && 'Send'}
                 </button>
+                </div>
               <div className="register">
                 {error && (<p className='error'>Internal Server Error</p>)}
                 <br />

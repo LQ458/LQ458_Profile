@@ -5,25 +5,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 body {
-  overflow-y: scroll; /* 允许垂直滚动 */
-  overflow-x: hidden; /* 隐藏水平滚动条 */
+  overflow-y: scroll;
+  overflow-x: hidden;
   background: linear-gradient(45deg, #f196e6, #72037a);
-  background-attachment: fixed; /* 使背景固定不滚动 */
-
-  /* 以下是为了填充整个视口高度和宽度，并去除margin和padding */
+  background-attachment: fixed;
   margin: 0;
   padding: 0;
-  height: 100vh;
-  width: 100vw;
   box-sizing: border-box;
   font-family: 'poppins', sans-serif;
 }
   h1, p{
     font-family: 'poppins',sans-serif;
   }
-.icon{
-    position: relative;
-    padding-right: 1.5rem;
+.icon {
+  position: relative;
+  padding-right: 1.5rem;
 }
   
   .header-container {
@@ -39,6 +35,7 @@ body {
     font-size: 3rem;
     font-family: 'Bebas Neue', sans-serif;
     font-weight: 600;
+    text-shadow: 4px 4px 8px #72037a;
   }
   
   .background-shapes {
@@ -83,10 +80,56 @@ body {
     margin: 0;
     font-weight: bold;
     max-width: 30ch;
-    font-size: 1rem;
+    font-size: 0.8rem;
     opacity: 85%;
   }
   footer{
     position: relative;
     background-color: #72037a94;
+    height:31rem;
+  }
+  .cn{
+    position: relative;
+    font-size: 2rem;
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 600;
+    left: 41rem;
+    top: 1rem;
+  }
+  .inp{
+    border: 2px solid transparent;
+    padding-left: 1rem;
+    border-radius: 25px;
+    box-shadow: 0 3px 8px #01acc2;
+  }
+  #inputform{
+    color: #431f82;
+    font-size: 1.5rem;
+    font-style: bold;
+    font-weight: 500;
+  }
+  .sub{
+    top:20px;
+    position: relative;
+    border: 2px solid transparent;
+    background-color: #6aefef;
+    box-shadow: 0 5px 8px #431f82;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 40px;
+    left:2rem;
+  }
+  .loader{
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  .inputbox{
+    padding-top:1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+  }
+  .block{
+    padding:2rem;
   }
