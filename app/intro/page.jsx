@@ -40,7 +40,7 @@ const Intro = () => {
   return (
     <body>
         
-      <motion.div className="header-container" animate={{ x: 50 }}
+      <motion.div className="header-container" animate={{ x: '10%' }}
   transition={{
     ease: "linear",
     duration: 2,
@@ -177,7 +177,7 @@ const Intro = () => {
         <motion.a
           href="https://github.com/LQ458"
           className="link-item"
-          animate={{ x: 415 }}
+          animate={{ x: '113%' }}
   transition={{
     ease: "linear",
     x: { duration: 3 }}}
@@ -193,7 +193,7 @@ const Intro = () => {
           className="link-item"
           whileHover={{ scale: 1.1 }}
     whileTap={{ scale: 0.9 }}
-    animate={{ y: 270 }}
+    animate={{ y: '118%' }}
   transition={{
     ease: "linear",
     y: { duration: 3 }}}
@@ -207,7 +207,7 @@ const Intro = () => {
           className="link-item"
           whileHover={{ scale: 1.1 }}
     whileTap={{ scale: 0.9 }}
-    animate={{ y: 270 }}
+    animate={{ y: '118%' }}
   transition={{
     ease: "linear",
     y: { duration: 3 }}}
@@ -221,7 +221,7 @@ const Intro = () => {
           className="link-item"
           whileHover={{ scale: 1.1 }}
     whileTap={{ scale: 0.9 }}
-    animate={{ x: -415 }}
+    animate={{ x: '-113%' }}
   transition={{
     ease: "linear",
     x: { duration: 3 }}}
