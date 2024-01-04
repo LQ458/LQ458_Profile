@@ -1,7 +1,5 @@
-import Intro from './intro/page.jsx'
+import Intro from "./intro/page.jsx";
 
 export default function Home() {
-  return (
-    <Intro/>
-  )
+  return <Intro />;
 }
