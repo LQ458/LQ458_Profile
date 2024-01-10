@@ -85,10 +85,12 @@ const Intro = () => {
             y: { duration: 2 },
           }}
         >
-          <IonIcon
-            icon={logoGithub}
-            style={{ fontSize: "4rem", color: "#ed00c5" }}
-          />
+          <a href="https://github.com/" target="_blank">
+            <IonIcon
+              icon={logoGithub}
+              style={{ fontSize: "4rem", color: "#ed00c5" }}
+            />
+          </a>
         </motion.div>
         <motion.div
           animate={{ y: -50 }}
@@ -98,10 +100,12 @@ const Intro = () => {
             y: { duration: 2 },
           }}
         >
-          <IonIcon
-            icon={logoNodejs}
-            style={{ fontSize: "4rem", color: "#6aefee" }}
-          />
+          <a href="https://nodejs.org/en/" target="_blank">
+            <IonIcon
+              icon={logoNodejs}
+              style={{ fontSize: "4rem", color: "#6aefee" }}
+            />
+          </a>
         </motion.div>
 
         <motion.div
@@ -112,10 +116,12 @@ const Intro = () => {
             y: { duration: 2 },
           }}
         >
-          <IonIcon
-            icon={logoCss3}
-            style={{ fontSize: "4rem", color: "#ed00c5" }}
-          />
+          <a href="https://css3.com/" target="_blank">
+            <IonIcon
+              icon={logoCss3}
+              style={{ fontSize: "4rem", color: "#ed00c5" }}
+            />
+          </a>
         </motion.div>
 
         <motion.div
@@ -126,10 +132,15 @@ const Intro = () => {
             y: { duration: 2 },
           }}
         >
-          <IonIcon
-            icon={logoHtml5}
-            style={{ fontSize: "4rem", color: "#6aefee" }}
-          />
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5"
+            target="_blank"
+          >
+            <IonIcon
+              icon={logoHtml5}
+              style={{ fontSize: "4rem", color: "#6aefee" }}
+            />
+          </a>
         </motion.div>
 
         <motion.div
@@ -140,10 +151,12 @@ const Intro = () => {
             y: { duration: 2 },
           }}
         >
-          <IonIcon
-            icon={logoVue}
-            style={{ fontSize: "4rem", color: "#ed00c5" }}
-          />
+          <a href="https://vuejs.org/" target="_blank">
+            <IonIcon
+              icon={logoVue}
+              style={{ fontSize: "4rem", color: "#ed00c5" }}
+            />
+          </a>
         </motion.div>
 
         <motion.div
@@ -154,10 +167,12 @@ const Intro = () => {
             y: { duration: 2 },
           }}
         >
-          <IonIcon
-            icon={logoPython}
-            style={{ fontSize: "4rem", color: "#6aefee" }}
-          />
+          <a href="https://www.python.org/" target="_blank">
+            <IonIcon
+              icon={logoPython}
+              style={{ fontSize: "4rem", color: "#6aefee" }}
+            />
+          </a>
         </motion.div>
 
         <motion.div
@@ -168,10 +183,12 @@ const Intro = () => {
             y: { duration: 2 },
           }}
         >
-          <IonIcon
-            icon={logoReact}
-            style={{ fontSize: "4rem", color: "#ed00c5" }}
-          />
+          <a href="https://react.dev/" target="_blank">
+            <IonIcon
+              icon={logoReact}
+              style={{ fontSize: "4rem", color: "#ed00c5" }}
+            />
+          </a>
         </motion.div>
 
         <motion.div
@@ -182,10 +199,12 @@ const Intro = () => {
             y: { duration: 2 },
           }}
         >
-          <IonIcon
-            icon={logoVercel}
-            style={{ fontSize: "4rem", color: "#6aefee" }}
-          />
+          <a href="https://vercel.com/" target="_blank">
+            <IonIcon
+              icon={logoVercel}
+              style={{ fontSize: "4rem", color: "#6aefee" }}
+            />
+          </a>
         </motion.div>
 
         <motion.div
@@ -196,10 +215,12 @@ const Intro = () => {
             y: { duration: 2 },
           }}
         >
-          <IonIcon
-            icon={logoAngular}
-            style={{ fontSize: "4rem", color: "#ed00c5" }}
-          />
+          <a href="https://angular.io/" target="_blank">
+            <IonIcon
+              icon={logoAngular}
+              style={{ fontSize: "4rem", color: "#ed00c5" }}
+            />
+          </a>
         </motion.div>
 
         <motion.div
@@ -210,11 +231,24 @@ const Intro = () => {
             y: { duration: 2 },
           }}
         >
-          <IonIcon
-            icon={logoJavascript}
-            style={{ fontSize: "4rem", color: "#6aefee" }}
-          />
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+            target="_blank"
+          >
+            <IonIcon
+              icon={logoJavascript}
+              style={{ fontSize: "4rem", color: "#6aefee" }}
+            />
+          </a>
         </motion.div>
+      </div>
+
+      <div className="profile">
+        <h1 className="pTitle">Yihao Qin (Nickname: Leo)</h1>
+        <p className="pContent">
+          Hii! I am a high school student currently studying in Basis
+          International School Park Lane Harbor in Huizhou, China.
+        </p>
       </div>
 
       <div className="link-grid">

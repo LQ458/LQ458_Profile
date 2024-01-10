@@ -1,4 +1,6 @@
 import "./globals.css";
+import "typeface-dosis";
+import "typeface-poppins";
 
 export const metadata = {
   title: "LQ458 Personal Website",

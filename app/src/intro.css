@@ -1,8 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
 body {
   overflow-y: scroll;
@@ -12,11 +10,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "poppins", sans-serif;
-}
-h1,
-p {
-  font-family: "poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 .icon {
   position: relative;
@@ -135,4 +129,39 @@ footer {
 }
 .block {
   padding: 2rem;
+}
+div.profile {
+  background-color: rgba(234, 234, 234, 0.5);
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  width: 40vw;
+  position: relative;
+  top: 30vh;
+  left: 5vw;
+  box-shadow: 4px 4px 4px rgba(255, 255, 255, 0.845);
+  animation: shift 3.5s ease-in-out;
+  font-family: "Dosis", sans-serif;
+}
+h1.pTitle {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #6aefef;
+  text-shadow: #ed00eb 2px 2px 2px;
+}
+p.pContent {
+  color: #72037a;
+  font-weight: 600;
+  font-size: 1.3rem;
+  text-align: left;
+  position: relative;
+  left: 0.2vw;
+}
+@keyframes shift {
+  0% {
+    transform: translateX(-100vw);
+  }
+  100% {
+    transform: translateX(0vw);
+  }
 }
