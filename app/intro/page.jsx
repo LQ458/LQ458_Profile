@@ -54,15 +54,7 @@ const Intro = () => {
   };
   return (
     <body>
-      <motion.div
-        className="header-container"
-        animate={{ x: "3.5rem" }}
-        transition={{
-          ease: "linear",
-          duration: 2,
-          x: { duration: 2 },
-        }}
-      >
+      <div className="header-container">
         <div className="icon-container">
           <IonIcon
             icon={person}
@@ -71,10 +63,10 @@ const Intro = () => {
           />
         </div>
         <div className="Content">LQ458 Profile</div>
-        <motion.a className="cn" href="/404" whileHover={{ scale: 1.2 }}>
+        <a className="cn" href="/404">
           中文版网站/Chinese Version
-        </motion.a>
-      </motion.div>
+        </a>
+      </div>
 
       <div className="background-shapes">
         <motion.div
@@ -246,140 +238,125 @@ const Intro = () => {
       <div className="profile">
         <h1 className="pTitle">Yihao Qin (Nickname: Leo)</h1>
         <p className="pContent">
-          Hii! I am a high school student currently studying in Basis
-          International School Park Lane Harbor in Huizhou, China.
+          Hii! I am a high school student currently studying in{" "}
+          <span className="underline">
+            Basis International School Park Lane Harbor
+          </span>{" "}
+          in Huizhou, China. I've completed 4 AP classes (
+          <span className="underline">
+            AP Macro and Microeconomics, AP World History, AP Physics 1
+          </span>
+          ), and I am studying 4 more AP classes (
+          <span className="underline">
+            AP Calculus AB, AP Computer Science A, AP European History, AP
+            Physics 2
+          </span>
+          ).
+        </p>
+        <p className="pContent">
+          I am a self-taught programmer who mainly focuses on web development
+          for now. I've already built several full-stack web applications using
+          frontend framework such as{" "}
+          <span className="underline">React, Vue, Angular</span>, and backend
+          framework such as
+          <span className="underline">Express and nodejs</span>. I am also
+          familiar with other programming languages such as{" "}
+          <span className="underline">
+            C++, Java, Python, and JavaScript (Typescript as well)
+          </span>
+          .
         </p>
       </div>
+      <div className="links">
 
       <div className="link-grid">
-        <motion.a
-          href="https://github.com/LQ458"
-          className="link-item"
-          animate={{ x: "25.5vw" }}
-          transition={{
-            ease: "linear",
-            x: { duration: 2 },
-          }}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-        >
+        <a href="https://github.com/LQ458" className="link-item1">
           <h2 className="link-title">My Github</h2>
           <p className="link-description">
             Find me through github by clicking this tab (LQ458).
           </p>
-        </motion.a>
+        </a>
 
-        <motion.a
-          href="/notes"
-          className="link-item"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          animate={{ y: "36vh" }}
-          transition={{
-            ease: "linear",
-            y: { duration: 2 },
-          }}
-        >
+        <a href="/notes" className="link-item2">
           <h2 className="link-title">LQ Notes</h2>
           <p className="link-description">
             Find in-depth information about me and my studing notes.
           </p>
-        </motion.a>
+        </a>
 
-        <motion.a
-          href="/news"
-          className="link-item"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          animate={{ y: "36vh" }}
-          transition={{
-            ease: "linear",
-            y: { duration: 2 },
-          }}
-        >
+        <a href="/news" className="link-item2">
           <h2 className="link-title">News</h2>
           <p className="link-description">
             Always catch up with my latest projects and development news.
           </p>
-        </motion.a>
+        </a>
 
-        <motion.a
-          href="/life"
-          className="link-item"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          animate={{ x: "-25.5vw" }}
-          transition={{
-            ease: "linear",
-            x: { duration: 2 },
-          }}
-        >
+        <a href="/life" className="link-item4">
           <h2 className="link-title">LQ Life</h2>
           <p className="link-description">
             Find more interesting aspects about me in this block.
           </p>
-        </motion.a>
+        </a>
+      </div>
       </div>
       <footer>
-        <motion.div>
-          <form onSubmit={handleSubmit} id="inputform" ref={formRef}>
-            <div className="block"></div>
-            <div className="inputbox">
-              <input
-                type="name"
-                onChange={(e) => setName(e.target.value)}
-                placeholder="Your Name"
-                className="inp"
-              />
-            </div>
-            <div className="inputbox">
-              <input
-                type="email"
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Your Email"
-                className="inp"
-              />
-            </div>
-            <div className="inputbox">
-              <input
-                type="suggestion"
-                onChange={(e) => setSuggestion(e.target.value)}
-                required
-                placeholder="Any Problems?*"
-                className="inp"
-              />
-            </div>
-            <div className="inputbox">
-              <input
-                type="note"
-                onChange={(e) => setNote(e.target.value)}
-                required
-                placeholder="Leave a Message...*"
-                className="inp"
-              />
-            </div>
-            <div className="sbtn">
-              <button type="submit" className="sub" disabled={loading}>
-                {loading && (
-                  <div className="loader">
-                    <TailSpin
-                      type="ThreeDots"
-                      color="#431f82"
-                      height={30}
-                      width={50}
-                    />
-                    <p>Loading...</p>
-                  </div>
-                )}
-                {!loading && "Send"}
-              </button>
-            </div>
-            <div className="register">
-              {error && <p className="error">Internal Server Error</p>}
-              <br />
-            </div>
-          </form>
-        </motion.div>
+        <form onSubmit={handleSubmit} id="inputform" ref={formRef}>
+          <div className="block"></div>
+          <div className="inputbox">
+            <input
+              type="name"
+              onChange={(e) => setName(e.target.value)}
+              placeholder="Your Name"
+              className="inp"
+            />
+          </div>
+          <div className="inputbox">
+            <input
+              type="email"
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Your Email"
+              className="inp"
+            />
+          </div>
+          <div className="inputbox">
+            <input
+              type="suggestion"
+              onChange={(e) => setSuggestion(e.target.value)}
+              required
+              placeholder="Any Problems?*"
+              className="inp"
+            />
+          </div>
+          <div className="inputbox">
+            <input
+              type="note"
+              onChange={(e) => setNote(e.target.value)}
+              required
+              placeholder="Leave a Message...*"
+              className="inp"
+            />
+          </div>
+          <div className="sbtn">
+            <button type="submit" className="sub" disabled={loading}>
+              {loading && (
+                <div className="loader">
+                  <TailSpin
+                    type="ThreeDots"
+                    color="#431f82"
+                    height={30}
+                    width={50}
+                  />
+                  <p>Loading...</p>
+                </div>
+              )}
+              {!loading && "Send"}
+            </button>
+          </div>
+          <div className="register">
+            {error && <p className="error">Internal Server Error</p>}
+            <br />
+          </div>
+        </form>
       </footer>
     </body>
   );
