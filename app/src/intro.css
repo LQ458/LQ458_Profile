@@ -33,7 +33,7 @@ body {
 }
 
 .background-shapes {
-  top: 30vh;
+  top: 28vh;
   left: 3vw;
   position: relative;
   display: flex;
@@ -47,7 +47,7 @@ body {
   left: 2.5vw;
   gap: 2vw;
 }
-div.links{
+div.links {
   position: relative;
   top: 40vh;
   justify-content: center;
@@ -252,4 +252,111 @@ a.link-item4 {
   border-radius: 10px;
   animation: BlockShift4 3.5s ease-in-out;
   animation-fill-mode: forwards;
+}
+@keyframes IconShift1{
+  0% {
+    opacity: 0;
+    transform: translateY(0vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-8vh);
+  }
+}
+div.logoBox2{
+  animation: IconShift1 3.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes IconShift2{
+  0% {
+    opacity: 0;
+    transform: translateY(0vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-14vh);
+  }
+}
+div.logoBox3{
+  animation: IconShift2 3.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes IconShift3{
+  0% {
+    opacity: 0;
+    transform: translateY(0vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-18vh);
+  }
+}
+div.logoBox4{
+  animation: IconShift3 3.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+div.logoBox5{
+  position: relative;
+  top: 0vh;
+  left: 0vw;
+  animation: IconShift2 3.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+div.logoBox6{
+  position: relative;
+  top: 0vh;
+  left: 0vw;
+  animation: IconShift4 3.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+div.logoBox8{
+  position: relative;
+  top: 0vh;
+  left: 0vw;
+  animation: IconShift4 3.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+div.logoBox9{
+  position: relative;
+  top: 0vh;
+  left: 0vw;
+  animation: IconShift5 3.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+div.logoBox10{
+  position: relative;
+  top: 0vh;
+  left: 0vw;
+  animation: IconShift6 3.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes IconShift4{
+  0% {
+    opacity: 0;
+    transform: translateY(0vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-5vh);
+  }
+}
+@keyframes IconShift5{
+  0% {
+    opacity: 0;
+    transform: translateY(0vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-10vh);
+  }
+}
+@keyframes IconShift6{
+  0% {
+    opacity: 0;
+    transform: translateY(0vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-18vh);
+  }
 }

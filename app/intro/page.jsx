@@ -2,7 +2,6 @@
 import { useRef } from "react";
 import { useState } from "react";
 import React from "react";
-import { motion } from "framer-motion";
 import { IonIcon } from "@ionic/react";
 import axios from "axios";
 import { person } from "ionicons/icons";
@@ -69,61 +68,33 @@ const Intro = () => {
       </div>
 
       <div className="background-shapes">
-        <motion.div
-          animate={{ y: -30 }}
-          transition={{
-            ease: "linear",
-            duration: 1,
-            y: { duration: 2 },
-          }}
-        >
+        <div className="logoBox1" >
           <a href="https://github.com/" target="_blank">
             <IonIcon
               icon={logoGithub}
               style={{ fontSize: "4rem", color: "#ed00c5" }}
             />
           </a>
-        </motion.div>
-        <motion.div
-          animate={{ y: -50 }}
-          transition={{
-            ease: "linear",
-            duration: 1,
-            y: { duration: 2 },
-          }}
-        >
+        </div>
+        <div className="logoBox2">
           <a href="https://nodejs.org/en/" target="_blank">
             <IonIcon
               icon={logoNodejs}
               style={{ fontSize: "4rem", color: "#6aefee" }}
             />
           </a>
-        </motion.div>
+        </div>
 
-        <motion.div
-          animate={{ y: -70 }}
-          transition={{
-            ease: "linear",
-            duration: 1,
-            y: { duration: 2 },
-          }}
-        >
+        <div className="logoBox3">
           <a href="https://css3.com/" target="_blank">
             <IonIcon
               icon={logoCss3}
               style={{ fontSize: "4rem", color: "#ed00c5" }}
             />
           </a>
-        </motion.div>
+        </div>
 
-        <motion.div
-          animate={{ y: -90 }}
-          transition={{
-            ease: "linear",
-            duration: 1,
-            y: { duration: 2 },
-          }}
-        >
+        <div className="logoBox4">
           <a
             href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5"
             target="_blank"
@@ -133,96 +104,54 @@ const Intro = () => {
               style={{ fontSize: "4rem", color: "#6aefee" }}
             />
           </a>
-        </motion.div>
+        </div>
 
-        <motion.div
-          animate={{ y: -70 }}
-          transition={{
-            ease: "linear",
-            duration: 1,
-            y: { duration: 2 },
-          }}
-        >
+        <div className="logoBox5">
           <a href="https://vuejs.org/" target="_blank">
             <IonIcon
               icon={logoVue}
               style={{ fontSize: "4rem", color: "#ed00c5" }}
             />
           </a>
-        </motion.div>
+        </div>
 
-        <motion.div
-          animate={{ y: -50 }}
-          transition={{
-            ease: "linear",
-            duration: 1,
-            y: { duration: 2 },
-          }}
-        >
+        <div className="logoBox6">
           <a href="https://www.python.org/" target="_blank">
             <IonIcon
               icon={logoPython}
               style={{ fontSize: "4rem", color: "#6aefee" }}
             />
           </a>
-        </motion.div>
+        </div>
 
-        <motion.div
-          animate={{ y: -30 }}
-          transition={{
-            ease: "linear",
-            duration: 1,
-            y: { duration: 2 },
-          }}
-        >
+        <div className="logoBox7">
           <a href="https://react.dev/" target="_blank">
             <IonIcon
               icon={logoReact}
               style={{ fontSize: "4rem", color: "#ed00c5" }}
             />
           </a>
-        </motion.div>
+        </div>
 
-        <motion.div
-          animate={{ y: -50 }}
-          transition={{
-            ease: "linear",
-            duration: 1,
-            y: { duration: 2 },
-          }}
-        >
+        <div className="logoBox8">
           <a href="https://vercel.com/" target="_blank">
             <IonIcon
               icon={logoVercel}
               style={{ fontSize: "4rem", color: "#6aefee" }}
             />
           </a>
-        </motion.div>
+        </div>
 
-        <motion.div
-          animate={{ y: -70 }}
-          transition={{
-            ease: "linear",
-            duration: 1,
-            y: { duration: 2 },
-          }}
-        >
+        <div className="logoBox9">
           <a href="https://angular.io/" target="_blank">
             <IonIcon
               icon={logoAngular}
               style={{ fontSize: "4rem", color: "#ed00c5" }}
             />
           </a>
-        </motion.div>
+        </div>
 
-        <motion.div
-          animate={{ y: -90 }}
-          transition={{
-            ease: "linear",
-            duration: 1,
-            y: { duration: 2 },
-          }}
-        >
+        <div className="logoBox10">
           <a
             href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
             target="_blank"
@@ -232,7 +161,7 @@ const Intro = () => {
               style={{ fontSize: "4rem", color: "#6aefee" }}
             />
           </a>
-        </motion.div>
+        </div>
       </div>
 
       <div className="profile">
@@ -268,36 +197,35 @@ const Intro = () => {
         </p>
       </div>
       <div className="links">
+        <div className="link-grid">
+          <a href="https://github.com/LQ458" className="link-item1">
+            <h2 className="link-title">My Github</h2>
+            <p className="link-description">
+              Find me through github by clicking this tab (LQ458).
+            </p>
+          </a>
 
-      <div className="link-grid">
-        <a href="https://github.com/LQ458" className="link-item1">
-          <h2 className="link-title">My Github</h2>
-          <p className="link-description">
-            Find me through github by clicking this tab (LQ458).
-          </p>
-        </a>
+          <a href="/notes" className="link-item2">
+            <h2 className="link-title">LQ Notes</h2>
+            <p className="link-description">
+              Find in-depth information about me and my studing notes.
+            </p>
+          </a>
 
-        <a href="/notes" className="link-item2">
-          <h2 className="link-title">LQ Notes</h2>
-          <p className="link-description">
-            Find in-depth information about me and my studing notes.
-          </p>
-        </a>
+          <a href="/news" className="link-item2">
+            <h2 className="link-title">News</h2>
+            <p className="link-description">
+              Always catch up with my latest projects and development news.
+            </p>
+          </a>
 
-        <a href="/news" className="link-item2">
-          <h2 className="link-title">News</h2>
-          <p className="link-description">
-            Always catch up with my latest projects and development news.
-          </p>
-        </a>
-
-        <a href="/life" className="link-item4">
-          <h2 className="link-title">LQ Life</h2>
-          <p className="link-description">
-            Find more interesting aspects about me in this block.
-          </p>
-        </a>
-      </div>
+          <a href="/life" className="link-item4">
+            <h2 className="link-title">LQ Life</h2>
+            <p className="link-description">
+              Find more interesting aspects about me in this block.
+            </p>
+          </a>
+        </div>
       </div>
       <footer>
         <form onSubmit={handleSubmit} id="inputform" ref={formRef}>
