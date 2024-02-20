@@ -106,7 +106,7 @@ const Intro = () => {
 
       <div className="background-shapes">
         <div className="logoBox1">
-          <a href="https://github.com/" target="_blank">
+          <a href="https://github.com/LQ458" target="_blank">
             <IonIcon
               icon={logoGithub}
               style={{ fontSize: "4rem" }}
@@ -212,8 +212,8 @@ const Intro = () => {
       </div>
 
       <div className="profile">
-        <h1 className={`pTitle`}>{t('Yihao Qin (Nickname: Leo)')}</h1>
-        <p className={`pContent ${i18n.language.substring(0, 2) === 'zh' && "add"}`}>
+        <h1 className={`pTitle ${i18n.language.substring(0, 2) === 'zh' && "add1"}`}>{t('Yihao Qin (Nickname: Leo)')}</h1>
+        <p className={`pContent ${i18n.language.substring(0, 2) === 'zh' && "add1"}`}>
           {t('Hii! I am a high school student currently studying in')}{" "}
           <a href="https://biph.basischina.com/#/home?lang=en" target="_blank" className="underline toWeb">
             {t('Basis International School Park Lane Harbor')}
@@ -226,25 +226,23 @@ const Intro = () => {
           <a href="https://apcentral.collegeboard.org/courses" target="_blank" className="underline toWeb">
             {t('AP Calculus AB, AP Computer Science A, AP European History, AP Physics 2')}
           </a>
-          ).
+          {t(').')}
         </p>
-        <p className="pContent">
-          I am a self-taught programmer who mainly focuses on web development
-          for now. I've already built several full-stack web applications using
-          frontend framework such as{" "}
-          <span className="underline">React, Vue, Angular</span>, and backend
-          framework such as
-          <span className="underline">Express and nodejs</span>. I am also
-          familiar with other programming languages such as{" "}
+        <p className={`pContent ${i18n.language.substring(0, 2) === 'zh' && "add1"}`}>
+          {t("I am a self-taught programmer who mainly focuses on web development for now. I've already built several full-stack web applications using frontend framework such as")}{" "}
+          <span className="underline">{t('React, Vue, Angular')}</span>
+          {t(', and backend framework such as')}
+          <span className="underline">{t('Express and nodejs')}</span>
+          {t('. I am also familiar with other programming languages such as')}{" "}
           <span className="underline">
-            C++, Java, Python, and JavaScript (Typescript as well)
+            {t('C++, Java, Python, and JavaScript (Typescript as well)')}
           </span>
-          .
+          {t('.')}
         </p>
       </div>
       <div className="links">
         <div className="link-grid">
-          <a href="https://github.com/LQ458" className="link-item1">
+          <a href="https://github.com/LQ458" target="_blank" className="link-item1">
             <h2 className="link-title">My Github</h2>
             <p className="link-description">
               Find me through github by clicking this tab (LQ458).

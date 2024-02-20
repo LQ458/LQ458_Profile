@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css2?family=Righteous&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Righteous&family=ZCOOL+QingKe+HuangYou&display=swap);
-
+@import url(https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC&display=swap);
 body {
   overflow-y: scroll;
   background-color: white;
@@ -350,10 +350,14 @@ div.bg1 {
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--yellow-dark);
 }
-div.add{
+.add{
   font-weight: 300;
   font-family: "ZCOOL QingKe HuangYou", sans-serif;
 }
 a.toWeb:hover{
   text-decoration: none;
+}
+.add1{
+  font-weight: 100;
+  font-family: "Noto Serif SC", serif;
 }
