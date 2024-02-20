@@ -57,22 +57,21 @@ const Intro = () => {
         <div className="icon-container">
           <IonIcon
             icon={person}
-            style={{ fontSize: "4rem" }}
+            style={{ fontSize: "2.3rem" }}
             className="icon"
           />
         </div>
-        <div className="Content">LQ458 Profile</div>
-        <a className="cn" href="/404">
-          中文版网站/Chinese Version
-        </a>
+        <div className="Content">Yihao Qin's Profile</div>
       </div>
+      <div className="bg1"/>
 
       <div className="background-shapes">
-        <div className="logoBox1" >
+        <div className="logoBox1">
           <a href="https://github.com/" target="_blank">
             <IonIcon
               icon={logoGithub}
-              style={{ fontSize: "4rem", color: "#ed00c5" }}
+              style={{ fontSize: "4rem" }}
+              className="icon1"
             />
           </a>
         </div>
@@ -80,7 +79,8 @@ const Intro = () => {
           <a href="https://nodejs.org/en/" target="_blank">
             <IonIcon
               icon={logoNodejs}
-              style={{ fontSize: "4rem", color: "#6aefee" }}
+              style={{ fontSize: "4rem" }}
+              className="icon2"
             />
           </a>
         </div>
@@ -89,7 +89,8 @@ const Intro = () => {
           <a href="https://css3.com/" target="_blank">
             <IonIcon
               icon={logoCss3}
-              style={{ fontSize: "4rem", color: "#ed00c5" }}
+              style={{ fontSize: "4rem" }}
+              className="icon1"
             />
           </a>
         </div>
@@ -101,7 +102,8 @@ const Intro = () => {
           >
             <IonIcon
               icon={logoHtml5}
-              style={{ fontSize: "4rem", color: "#6aefee" }}
+              style={{ fontSize: "4rem" }}
+              className="icon2"
             />
           </a>
         </div>
@@ -110,7 +112,8 @@ const Intro = () => {
           <a href="https://vuejs.org/" target="_blank">
             <IonIcon
               icon={logoVue}
-              style={{ fontSize: "4rem", color: "#ed00c5" }}
+              style={{ fontSize: "4rem" }}
+              className="icon1"
             />
           </a>
         </div>
@@ -119,7 +122,8 @@ const Intro = () => {
           <a href="https://www.python.org/" target="_blank">
             <IonIcon
               icon={logoPython}
-              style={{ fontSize: "4rem", color: "#6aefee" }}
+              style={{ fontSize: "4rem" }}
+              className="icon2"
             />
           </a>
         </div>
@@ -128,7 +132,8 @@ const Intro = () => {
           <a href="https://react.dev/" target="_blank">
             <IonIcon
               icon={logoReact}
-              style={{ fontSize: "4rem", color: "#ed00c5" }}
+              style={{ fontSize: "4rem" }}
+              className="icon1"
             />
           </a>
         </div>
@@ -137,7 +142,8 @@ const Intro = () => {
           <a href="https://vercel.com/" target="_blank">
             <IonIcon
               icon={logoVercel}
-              style={{ fontSize: "4rem", color: "#6aefee" }}
+              style={{ fontSize: "4rem" }}
+              className="icon2"
             />
           </a>
         </div>
@@ -146,7 +152,8 @@ const Intro = () => {
           <a href="https://angular.io/" target="_blank">
             <IonIcon
               icon={logoAngular}
-              style={{ fontSize: "4rem", color: "#ed00c5" }}
+              style={{ fontSize: "4rem" }}
+              className="icon1"
             />
           </a>
         </div>
@@ -158,7 +165,8 @@ const Intro = () => {
           >
             <IonIcon
               icon={logoJavascript}
-              style={{ fontSize: "4rem", color: "#6aefee" }}
+              style={{ fontSize: "4rem" }}
+              className="icon2"
             />
           </a>
         </div>
@@ -212,14 +220,14 @@ const Intro = () => {
             </p>
           </a>
 
-          <a href="/news" className="link-item2">
+          <a href="/news" className="link-item1">
             <h2 className="link-title">News</h2>
             <p className="link-description">
               Always catch up with my latest projects and development news.
             </p>
           </a>
 
-          <a href="/life" className="link-item4">
+          <a href="/life" className="link-item2">
             <h2 className="link-title">LQ Life</h2>
             <p className="link-description">
               Find more interesting aspects about me in this block.

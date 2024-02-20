@@ -1,10 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url(https://fonts.googleapis.com/css2?family=Righteous&display=swap);
 
 body {
   overflow-y: scroll;
-  background: linear-gradient(45deg, #f196e6, #72037a);
+  background-color: white;
   background-attachment: fixed;
   margin: 0;
   padding: 0;
@@ -20,16 +18,16 @@ body {
   position: relative;
   display: flex;
   align-items: left;
-  color: #01acc2;
+  color: var(--yellow);
 }
 
 .Content {
   position: relative;
-  font-size: 3rem;
+  font-size: 1.7rem;
   width: 25vw;
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 600;
-  text-shadow: 4px 4px 8px #72037a;
+  font-family: "Righteous", sans-serif;
+  font-weight: 100;
+  text-shadow: 2px 2px 2px var(--purple-darkest);
 }
 
 .background-shapes {
@@ -42,10 +40,9 @@ body {
 
 .link-grid {
   position: relative;
-  display: flex;
-  width: 85vw;
-  left: 2.5vw;
-  gap: 2vw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1vw;
 }
 div.links {
   position: relative;
@@ -69,7 +66,7 @@ div.links {
 }
 footer {
   position: relative;
-  background-color: #72037a94;
+  background-color: var(--purple-darkest);
   height: 60vh;
   width: 100vw;
 }
@@ -86,13 +83,13 @@ footer {
   transform: scale(1.15);
 }
 .inp {
-  border: 2px solid transparent;
+  padding: 2px;
   padding-left: 1rem;
   border-radius: 25px;
-  box-shadow: 0 3px 8px #01acc2;
+  box-shadow: 2px 2px 3px var(--yellow-darker);
 }
 #inputform {
-  color: #431f82;
+  color: black;
   font-size: 1.5rem;
   font-style: bold;
   font-weight: 500;
@@ -100,9 +97,9 @@ footer {
 .sub {
   top: 3vh;
   position: relative;
+  color: black;
   border: 2px solid transparent;
-  background-color: #6aefef;
-  box-shadow: 0 5px 8px #431f82;
+  background-color: var(--purple-lighter);
   padding-left: 2rem;
   padding-right: 2rem;
   border-radius: 40px;
@@ -123,26 +120,26 @@ footer {
   padding: 2rem;
 }
 div.profile {
-  background-color: rgba(234, 234, 234, 0.5);
+  background-color: #fbfbfb;
   padding: 1rem;
   border-radius: 10px;
   border: 1px solid transparent;
   width: 40vw;
   position: relative;
   top: 30vh;
-  left: 5vw;
-  box-shadow: 4px 4px 4px rgba(255, 255, 255, 0.845);
+  left: 55vw;
+  box-shadow: 4px 4px 4px rgba(244, 244, 244, 0.845);
   animation: shift 3.5s ease-in-out;
   font-family: "Dosis", sans-serif;
 }
 h1.pTitle {
   font-size: 2.1rem;
   font-weight: 700;
-  color: #6aefef;
-  text-shadow: #ed00eb 2px 2px 2px;
+  color: var(--yellow-darkest);
+  text-shadow: var(--purple) 1px 1px 2px;
 }
 p.pContent {
-  color: #72037a;
+  color: var(--purple-darker);
   font-weight: 600;
   font-size: 1.3rem;
   text-align: left;
@@ -164,34 +161,6 @@ p.pContent {
 span.underline {
   font-weight: 800;
 }
-@keyframes BlockShift1 {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(24vw);
-    hover: scale(1.15);
-  }
-}
-@keyframes BlockShift2 {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(34vh);
-  }
-}
-@keyframes BlockShift4 {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(-24vw);
-  }
-}
 @keyframes TitleShift {
   0% {
     opacity: 0;
@@ -208,52 +177,31 @@ div.header-container {
   left: 3vw;
   top: 3vh;
 }
-a.link-item1 {
+a.link-item1{
   display: flex;
-  color: #6aefee;
+  color: var(--yellow-dark);
   font-size: 3rem;
   flex-direction: column;
-  height: 30vh;
+  height: 40vh;
+  margin-left: 1vw;
   align-items: center;
   justify-content: center;
-  background-color: #ed00eb;
-  padding: 1rem 2rem;
-  border: 2px solid transparent;
-  border-radius: 10px;
-  animation: BlockShift1 3.5s ease-in-out;
-  animation-fill-mode: forwards;
+  background-color: var(--purple);
+  border-radius: 5px;
 }
-a.link-item2 {
+a.link-item2{
   display: flex;
-  color: #6aefee;
+  color: var(--yellow-dark);
+  margin-right: 1vw;
   font-size: 3rem;
   flex-direction: column;
-  height: 30vh;
+  height: 40vh;
   align-items: center;
   justify-content: center;
-  background-color: #ed00eb;
-  padding: 1rem 2rem;
-  border: 2px solid transparent;
-  border-radius: 10px;
-  animation: BlockShift2 3.5s ease-in-out;
-  animation-fill-mode: forwards;
+  background-color: var(--purple-darker);
+  border-radius: 5px;
 }
-a.link-item4 {
-  display: flex;
-  color: #6aefee;
-  font-size: 3rem;
-  flex-direction: column;
-  height: 30vh;
-  align-items: center;
-  justify-content: center;
-  background-color: #ed00eb;
-  padding: 1rem 2rem;
-  border: 2px solid transparent;
-  border-radius: 10px;
-  animation: BlockShift4 3.5s ease-in-out;
-  animation-fill-mode: forwards;
-}
-@keyframes IconShift1{
+@keyframes IconShift1 {
   0% {
     opacity: 0;
     transform: translateY(0vh);
@@ -263,11 +211,11 @@ a.link-item4 {
     transform: translateY(-8vh);
   }
 }
-div.logoBox2{
+div.logoBox2 {
   animation: IconShift1 3.5s ease-in-out;
   animation-fill-mode: forwards;
 }
-@keyframes IconShift2{
+@keyframes IconShift2 {
   0% {
     opacity: 0;
     transform: translateY(0vh);
@@ -277,11 +225,11 @@ div.logoBox2{
     transform: translateY(-14vh);
   }
 }
-div.logoBox3{
+div.logoBox3 {
   animation: IconShift2 3.5s ease-in-out;
   animation-fill-mode: forwards;
 }
-@keyframes IconShift3{
+@keyframes IconShift3 {
   0% {
     opacity: 0;
     transform: translateY(0vh);
@@ -291,46 +239,46 @@ div.logoBox3{
     transform: translateY(-18vh);
   }
 }
-div.logoBox4{
+div.logoBox4 {
   animation: IconShift3 3.5s ease-in-out;
   animation-fill-mode: forwards;
 }
-div.logoBox5{
+div.logoBox5 {
   position: relative;
   top: 0vh;
   left: 0vw;
   animation: IconShift2 3.5s ease-in-out;
   animation-fill-mode: forwards;
 }
-div.logoBox6{
+div.logoBox6 {
   position: relative;
   top: 0vh;
   left: 0vw;
   animation: IconShift4 3.5s ease-in-out;
   animation-fill-mode: forwards;
 }
-div.logoBox8{
+div.logoBox8 {
   position: relative;
   top: 0vh;
   left: 0vw;
   animation: IconShift4 3.5s ease-in-out;
   animation-fill-mode: forwards;
 }
-div.logoBox9{
+div.logoBox9 {
   position: relative;
   top: 0vh;
   left: 0vw;
   animation: IconShift5 3.5s ease-in-out;
   animation-fill-mode: forwards;
 }
-div.logoBox10{
+div.logoBox10 {
   position: relative;
   top: 0vh;
   left: 0vw;
   animation: IconShift6 3.5s ease-in-out;
   animation-fill-mode: forwards;
 }
-@keyframes IconShift4{
+@keyframes IconShift4 {
   0% {
     opacity: 0;
     transform: translateY(0vh);
@@ -340,7 +288,7 @@ div.logoBox10{
     transform: translateY(-5vh);
   }
 }
-@keyframes IconShift5{
+@keyframes IconShift5 {
   0% {
     opacity: 0;
     transform: translateY(0vh);
@@ -350,7 +298,7 @@ div.logoBox10{
     transform: translateY(-10vh);
   }
 }
-@keyframes IconShift6{
+@keyframes IconShift6 {
   0% {
     opacity: 0;
     transform: translateY(0vh);
@@ -359,4 +307,19 @@ div.logoBox10{
     opacity: 1;
     transform: translateY(-18vh);
   }
+}
+div.bg1 {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 60vh;
+  background-color: var(--purple-bg1);
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
+}
+.icon1{
+  color: var(--yellow-light)
+}
+.icon2{
+  color: var(--purple-lighter)
 }
