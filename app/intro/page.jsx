@@ -1,7 +1,9 @@
 "use client";
 import { useRef } from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import React from "react";
+import "@/app/i18n";
+import { useTranslation } from "react-i18next";
 import { IonIcon } from "@ionic/react";
 import axios from "axios";
 import { person } from "ionicons/icons";
@@ -30,6 +32,29 @@ const Intro = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [message, setMessage] = useState("");
+  // i18n setting
+  const { t } = useTranslation();
+  const { i18n } = useTranslation();
+  const language = i18n.language.substring(0, 2); // get language from i18n
+  // Pull info(language) from localStorage
+
+  useEffect(() => {
+    if (!localStorage.getItem("language")) {
+      localStorage.setItem("language", navigator.language.substring(0, 2));
+    }
+    const selectedLanguage = localStorage.getItem("language");
+    if (selectedLanguage) {
+      i18n.changeLanguage(selectedLanguage);
+    }
+  }, [i18n]);
+
+  const changeLanguage = (event) => {
+    const selectedLanguage = event.target.value;
+    i18n.changeLanguage(selectedLanguage);
+    // save user option in localStorage
+    localStorage.setItem("language", selectedLanguage);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -61,9 +86,23 @@ const Intro = () => {
             className="icon"
           />
         </div>
-        <div className="Content">Yihao Qin's Profile</div>
+        <div className={`Content ${i18n.language.substring(0, 2) === 'zh' && "add"}`}>{t("Yihao Qin's Profile")}</div>
       </div>
       <div className="bg1"/>
+      <div className="language-selector">
+          <select
+            id="lang"
+            name="lang"
+            onChange={changeLanguage}
+            value={language}
+          >
+            <option value="en">English</option>
+            <option value="zh">中文</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+            <option value="ja">日本語</option>
+          </select>
+        </div>
 
       <div className="background-shapes">
         <div className="logoBox1">
@@ -173,21 +212,20 @@ const Intro = () => {
       </div>
 
       <div className="profile">
-        <h1 className="pTitle">Yihao Qin (Nickname: Leo)</h1>
-        <p className="pContent">
-          Hii! I am a high school student currently studying in{" "}
-          <span className="underline">
-            Basis International School Park Lane Harbor
-          </span>{" "}
-          in Huizhou, China. I've completed 4 AP classes (
-          <span className="underline">
-            AP Macro and Microeconomics, AP World History, AP Physics 1
-          </span>
-          ), and I am studying 4 more AP classes (
-          <span className="underline">
-            AP Calculus AB, AP Computer Science A, AP European History, AP
-            Physics 2
-          </span>
+        <h1 className={`pTitle`}>{t('Yihao Qin (Nickname: Leo)')}</h1>
+        <p className={`pContent ${i18n.language.substring(0, 2) === 'zh' && "add"}`}>
+          {t('Hii! I am a high school student currently studying in')}{" "}
+          <a href="https://biph.basischina.com/#/home?lang=en" target="_blank" className="underline toWeb">
+            {t('Basis International School Park Lane Harbor')}
+          </a>{" "}
+          {t("in Huizhou, China. I've completed 4 AP classes (")}
+          <a href="https://apcentral.collegeboard.org/courses" target="_blank" className="underline toWeb">
+            {t('AP Macro and Microeconomics, AP World History, AP Physics 1')}
+          </a>
+          {t('), and I am studying 4 more AP classes (')}
+          <a href="https://apcentral.collegeboard.org/courses" target="_blank" className="underline toWeb">
+            {t('AP Calculus AB, AP Computer Science A, AP European History, AP Physics 2')}
+          </a>
           ).
         </p>
         <p className="pContent">
