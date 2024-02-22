@@ -347,8 +347,12 @@ div.bg1 {
 ::-webkit-scrollbar {
   width: 10px;
 }
-::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb {
   background-color: var(--yellow-dark);
+}
+::-webkit-scrollbar-thumb:hover {
+  border-radius: 10px;
+  background-color: var(--yellow-darkest);
 }
 .add{
   font-weight: 300;
