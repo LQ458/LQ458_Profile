@@ -78,6 +78,7 @@ const Intro = () => {
   };
   return (
     <body>
+      <title>{t('')}</title>
       <div className="header-container">
         <div className="icon-container">
           <IonIcon
@@ -243,30 +244,30 @@ const Intro = () => {
       <div className="links">
         <div className="link-grid">
           <a href="https://github.com/LQ458" target="_blank" className="link-item1">
-            <h2 className="link-title">My Github</h2>
+            <h2 className="link-title">{t('My Github')}</h2>
             <p className="link-description">
-              Find me through github by clicking this tab (LQ458).
+              {t('Find me through github by clicking this tab (LQ458).')}
             </p>
           </a>
 
           <a href="/notes" className="link-item2">
-            <h2 className="link-title">LQ Notes</h2>
+            <h2 className="link-title">{t('LQ Notes')}</h2>
             <p className="link-description">
-              Find in-depth information about me and my studing notes.
+              {t('Find in-depth information about me and my studing notes.')}
             </p>
           </a>
 
           <a href="/news" className="link-item1">
-            <h2 className="link-title">News</h2>
+            <h2 className="link-title">{t('News')}</h2>
             <p className="link-description">
-              Always catch up with my latest projects and development news.
+              {t('Always catch up with my latest projects and development news.')}
             </p>
           </a>
 
           <a href="/life" className="link-item2">
-            <h2 className="link-title">LQ Life</h2>
+            <h2 className="link-title">{t('LQ Life')}</h2>
             <p className="link-description">
-              Find more interesting aspects about me in this block.
+              {t('Find more interesting aspects about me in this block.')}
             </p>
           </a>
         </div>
@@ -278,7 +279,7 @@ const Intro = () => {
             <input
               type="name"
               onChange={(e) => setName(e.target.value)}
-              placeholder="Your Name"
+              placeholder={t('Your Name')}
               className="inp"
             />
           </div>
@@ -286,7 +287,7 @@ const Intro = () => {
             <input
               type="email"
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="Your Email"
+              placeholder={t('Your Email')}
               className="inp"
             />
           </div>
@@ -295,7 +296,7 @@ const Intro = () => {
               type="suggestion"
               onChange={(e) => setSuggestion(e.target.value)}
               required
-              placeholder="Any Problems?*"
+              placeholder={t('Any Problems?*')}
               className="inp"
             />
           </div>
@@ -304,7 +305,7 @@ const Intro = () => {
               type="note"
               onChange={(e) => setNote(e.target.value)}
               required
-              placeholder="Leave a Message...*"
+              placeholder={t('Leave a Message...*')}
               className="inp"
             />
           </div>
@@ -321,7 +322,7 @@ const Intro = () => {
                   <p>Loading...</p>
                 </div>
               )}
-              {!loading && "Send"}
+              {!loading && t('Send')}
             </button>
           </div>
           <div className="register">
