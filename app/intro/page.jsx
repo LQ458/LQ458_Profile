@@ -58,18 +58,28 @@ const Intro = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      const button = document.getElementById("sub");
       setLoading(true);
+      if (button) {
+        button.style.transition = "all 0.5s";
+        button.style.width = "16rem";
+      }
       const response = await axios.post("/api/message", {
         name: name,
         email: email,
         suggestion: suggestion,
         note: note,
       });
-      console.log("Message successfully sent");
       setLoading(false);
+      if (button) {
+        button.style.width = "7rem";
+      }
       formRef.current.reset();
     } catch (error) {
       setLoading(false);
+      if (button) {
+        button.style.width = "7rem";
+      }
       setError(true);
       setTimeout(() => {
         window.location.reload();
@@ -78,7 +88,7 @@ const Intro = () => {
   };
   return (
     <body>
-      <title>{t('')}</title>
+      <title>{t("Yihao Qin's Profile")}</title>
       <div className="header-container">
         <div className="icon-container">
           <IonIcon
@@ -87,23 +97,27 @@ const Intro = () => {
             className="icon"
           />
         </div>
-        <div className={`Content ${i18n.language.substring(0, 2) === 'zh' && "add"}`}>{t("Yihao Qin's Profile")}</div>
-      </div>
-      <div className="bg1"/>
-      <div className="language-selector">
-          <select
-            id="lang"
-            name="lang"
-            onChange={changeLanguage}
-            value={language}
-          >
-            <option value="en">English</option>
-            <option value="zh">中文</option>
-            <option value="es">Español</option>
-            <option value="fr">Français</option>
-            <option value="ja">日本語</option>
-          </select>
+        <div
+          className={`Content ${i18n.language.substring(0, 2) === "zh" && "add"}`}
+        >
+          {t("Yihao Qin's Profile")}
         </div>
+      </div>
+      <div className="bg1" />
+      <div className="language-selector">
+        <select
+          id="lang"
+          name="lang"
+          onChange={changeLanguage}
+          value={language}
+        >
+          <option value="en">English</option>
+          <option value="zh">中文</option>
+          <option value="es">Español</option>
+          <option value="fr">Français</option>
+          <option value="ja">日本語</option>
+        </select>
+      </div>
 
       <div className="background-shapes">
         <div className="logoBox1">
@@ -213,61 +227,93 @@ const Intro = () => {
       </div>
 
       <div className="profile">
-        <h1 className={`pTitle ${i18n.language.substring(0, 2) === 'zh' && "add1"}`}>{t('Yihao Qin (Nickname: Leo)')}</h1>
-        <p className={`pContent ${i18n.language.substring(0, 2) === 'zh' && "add1"}`}>
-          {t('Hii! I am a high school student currently studying in')}{" "}
-          <a href="https://biph.basischina.com/#/home?lang=en" target="_blank" className="underline toWeb">
-            {t('Basis International School Park Lane Harbor')}
+        <h1
+          className={`pTitle ${i18n.language.substring(0, 2) === "zh" && "add1"}`}
+        >
+          {t("Yihao Qin (Nickname: Leo)")}
+        </h1>
+        <p
+          className={`pContent ${i18n.language.substring(0, 2) === "zh" && "add1"}`}
+        >
+          {t("Hii! I am a high school student currently studying in")}{" "}
+          <a
+            href="https://biph.basischina.com/#/home?lang=en"
+            target="_blank"
+            className="underline toWeb"
+          >
+            {t("Basis International School Park Lane Harbor")}
           </a>{" "}
           {t("in Huizhou, China. I've completed 4 AP classes (")}
-          <a href="https://apcentral.collegeboard.org/courses" target="_blank" className="underline toWeb">
-            {t('AP Macro and Microeconomics, AP World History, AP Physics 1')}
+          <a
+            href="https://apcentral.collegeboard.org/courses"
+            target="_blank"
+            className="underline toWeb"
+          >
+            {t("AP Macro and Microeconomics, AP World History, AP Physics 1")}
           </a>
-          {t('), and I am studying 4 more AP classes (')}
-          <a href="https://apcentral.collegeboard.org/courses" target="_blank" className="underline toWeb">
-            {t('AP Calculus AB, AP Computer Science A, AP European History, AP Physics 2')}
+          {t("), and I am studying 4 more AP classes (")}
+          <a
+            href="https://apcentral.collegeboard.org/courses"
+            target="_blank"
+            className="underline toWeb"
+          >
+            {t(
+              "AP Calculus AB, AP Computer Science A, AP European History, AP Physics 2",
+            )}
           </a>
-          {t(').')}
+          {t(").")}
         </p>
-        <p className={`pContent ${i18n.language.substring(0, 2) === 'zh' && "add1"}`}>
-          {t("I am a self-taught programmer who mainly focuses on web development for now. I've already built several full-stack web applications using frontend framework such as")}{" "}
-          <span className="underline">{t('React, Vue, Angular')}</span>
-          {t(', and backend framework such as')}
-          <span className="underline">{t('Express and nodejs')}</span>
-          {t('. I am also familiar with other programming languages such as')}{" "}
+        <p
+          className={`pContent ${i18n.language.substring(0, 2) === "zh" && "add1"}`}
+        >
+          {t(
+            "I am a self-taught programmer who mainly focuses on web development for now. I've already built several full-stack web applications using frontend framework such as",
+          )}{" "}
+          <span className="underline">{t("React, Vue, Angular")}</span>
+          {t(", and backend framework such as")}
+          <span className="underline">{t("Express and nodejs")}</span>
+          {t(
+            ". I am also familiar with other programming languages such as",
+          )}{" "}
           <span className="underline">
-            {t('C++, Java, Python, and JavaScript (Typescript as well)')}
+            {t("C++, Java, Python, and JavaScript (Typescript as well)")}
           </span>
-          {t('.')}
+          {t(".")}
         </p>
       </div>
       <div className="links">
         <div className="link-grid">
-          <a href="https://github.com/LQ458" target="_blank" className="link-item1">
-            <h2 className="link-title">{t('My Github')}</h2>
+          <a
+            href="https://github.com/LQ458"
+            target="_blank"
+            className="link-item1"
+          >
+            <h2 className="link-title">{t("My Github")}</h2>
             <p className="link-description">
-              {t('Find me through github by clicking this tab (LQ458).')}
+              {t("Find me through github by clicking this tab (LQ458).")}
             </p>
           </a>
 
           <a href="/notes" className="link-item2">
-            <h2 className="link-title">{t('LQ Notes')}</h2>
+            <h2 className="link-title">{t("LQ Notes")}</h2>
             <p className="link-description">
-              {t('Find in-depth information about me and my studing notes.')}
+              {t("Find in-depth information about me and my studing notes.")}
             </p>
           </a>
 
           <a href="/news" className="link-item1">
-            <h2 className="link-title">{t('News')}</h2>
+            <h2 className="link-title">{t("News")}</h2>
             <p className="link-description">
-              {t('Always catch up with my latest projects and development news.')}
+              {t(
+                "Always catch up with my latest projects and development news.",
+              )}
             </p>
           </a>
 
           <a href="/life" className="link-item2">
-            <h2 className="link-title">{t('LQ Life')}</h2>
+            <h2 className="link-title">{t("LQ Life")}</h2>
             <p className="link-description">
-              {t('Find more interesting aspects about me in this block.')}
+              {t("Find more interesting aspects about me in this block.")}
             </p>
           </a>
         </div>
@@ -279,7 +325,7 @@ const Intro = () => {
             <input
               type="name"
               onChange={(e) => setName(e.target.value)}
-              placeholder={t('Your Name')}
+              placeholder={t("Your Name")}
               className="inp"
             />
           </div>
@@ -287,7 +333,7 @@ const Intro = () => {
             <input
               type="email"
               onChange={(e) => setEmail(e.target.value)}
-              placeholder={t('Your Email')}
+              placeholder={t("Your Email")}
               className="inp"
             />
           </div>
@@ -296,7 +342,7 @@ const Intro = () => {
               type="suggestion"
               onChange={(e) => setSuggestion(e.target.value)}
               required
-              placeholder={t('Any Problems?*')}
+              placeholder={t("Any Problems?*")}
               className="inp"
             />
           </div>
@@ -305,24 +351,24 @@ const Intro = () => {
               type="note"
               onChange={(e) => setNote(e.target.value)}
               required
-              placeholder={t('Leave a Message...*')}
+              placeholder={t("Leave a Message...*")}
               className="inp"
             />
           </div>
           <div className="sbtn">
-            <button type="submit" className="sub" disabled={loading}>
+            <button type="submit" className="sub" id="sub" disabled={loading}>
               {loading && (
                 <div className="loader">
                   <TailSpin
                     type="ThreeDots"
-                    color="#431f82"
-                    height={30}
-                    width={50}
+                    color="#953cff"
+                    height={20}
+                    width={20}
                   />
-                  <p>Loading...</p>
+                  <p style={{ marginLeft: "8px" }}>Loading...</p>
                 </div>
               )}
-              {!loading && t('Send')}
+              {!loading && t("Send")}
             </button>
           </div>
           <div className="register">

@@ -31,7 +31,7 @@ body {
   text-shadow: 2px 2px 2px var(--purple-darkest);
 }
 
-.background-shapes {
+div.background-shapes {
   top: 28vh;
   left: 3vw;
   position: relative;
@@ -84,8 +84,9 @@ footer {
   transform: scale(1.15);
 }
 .inp {
-  padding: 2px;
-  padding-left: 1rem;
+  padding: 0.3rem 0 0.3rem 1.2rem;
+  font-size: 1.2rem;
+  outline: none;
   border-radius: 25px;
   box-shadow: 2px 2px 3px var(--yellow-darker);
 }
@@ -95,14 +96,16 @@ footer {
   font-style: bold;
   font-weight: 500;
 }
-.sub {
-  top: 3vh;
+button.sub {
+  top: 1.5rem;
   position: relative;
-  color: black;
-  border: 2px solid transparent;
+  color: var(--purple-darker);
+  font-size: 1.2rem;
+  height: 2.5rem;
+  width: 7rem;
+  align-items: center;
   background-color: var(--purple-lighter);
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding: 0 2rem 0 2rem;
   border-radius: 40px;
   left: 2vw;
 }
@@ -178,7 +181,7 @@ div.header-container {
   left: 3vw;
   top: 3vh;
 }
-a.link-item1{
+a.link-item1 {
   display: flex;
   color: var(--yellow-dark);
   font-size: 3rem;
@@ -189,8 +192,13 @@ a.link-item1{
   justify-content: center;
   background-color: var(--purple);
   border-radius: 5px;
+  transition: background-color 0.5s;
 }
-a.link-item2{
+a.link-item1:hover {
+  background-color: var(--purple-darkest);
+  transition: background-color 0.5s;
+}
+a.link-item2 {
   display: flex;
   color: var(--yellow-dark);
   margin-right: 1vw;
@@ -201,6 +209,11 @@ a.link-item2{
   justify-content: center;
   background-color: var(--purple-darker);
   border-radius: 5px;
+  transition: background-color 0.5s;
+}
+a.link-item2:hover {
+  background-color: var(--purple-light);
+  transition: background-color 0.5s;
 }
 @keyframes IconShift1 {
   0% {
@@ -318,11 +331,11 @@ div.bg1 {
   background-color: var(--purple-bg1);
   clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
 }
-.icon1{
-  color: var(--yellow-light)
+.icon1 {
+  color: var(--yellow-light);
 }
-.icon2{
-  color: var(--purple-lighter)
+.icon2 {
+  color: var(--purple-lighter);
 }
 .language-selector {
   position: absolute;
@@ -339,7 +352,8 @@ div.bg1 {
   color: #3c4043;
 }
 
-.language-selector select:active, .language-selector select:focus {
+.language-selector select:active,
+.language-selector select:focus {
   outline: none;
   box-shadow: none;
 }
@@ -354,14 +368,14 @@ div.bg1 {
   border-radius: 10px;
   background-color: var(--yellow-darkest);
 }
-.add{
+.add {
   font-weight: 300;
   font-family: "ZCOOL QingKe HuangYou", sans-serif;
 }
-a.toWeb:hover{
+a.toWeb:hover {
   text-decoration: none;
 }
-.add1{
+.add1 {
   font-weight: 100;
   font-family: "Noto Serif SC", serif;
 }
