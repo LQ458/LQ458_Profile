@@ -2,6 +2,7 @@
 import { useRef } from "react";
 import { useState, useEffect } from "react";
 import React from "react";
+import { LuSigmaSquare } from "react-icons/lu";
 import "@/app/i18n";
 import { useTranslation } from "react-i18next";
 import { IonIcon } from "@ionic/react";
@@ -224,6 +225,10 @@ const Intro = () => {
             />
           </a>
         </div>
+      </div>
+
+      <div className="sigma">
+        <LuSigmaSquare />
       </div>
 
       <div className="profile">
