@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import React from "react";
 import { LuSigmaSquare } from "react-icons/lu";
 import "@/app/i18n";
+import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { IonIcon } from "@ionic/react";
 import axios from "axios";
@@ -88,7 +89,7 @@ const Intro = () => {
     }
   };
   return (
-    <body>
+    <main>
       <title>{t("Yihao Qin's Profile")}</title>
       <div className="header-container">
         <div className="icon-container">
@@ -122,36 +123,36 @@ const Intro = () => {
 
       <div className="background-shapes">
         <div className="logoBox1">
-          <a href="https://github.com/LQ458" target="_blank">
+          <Link href="https://github.com/LQ458" target="_blank">
             <IonIcon
               icon={logoGithub}
               style={{ fontSize: "4rem" }}
               className="icon1"
             />
-          </a>
+          </Link>
         </div>
         <div className="logoBox2">
-          <a href="https://nodejs.org/en/" target="_blank">
+          <Link href="https://nodejs.org/en/" target="_blank">
             <IonIcon
               icon={logoNodejs}
               style={{ fontSize: "4rem" }}
               className="icon2"
             />
-          </a>
+          </Link>
         </div>
 
         <div className="logoBox3">
-          <a href="https://css3.com/" target="_blank">
+          <Link href="https://css3.com/" target="_blank">
             <IonIcon
               icon={logoCss3}
               style={{ fontSize: "4rem" }}
               className="icon1"
             />
-          </a>
+          </Link>
         </div>
 
         <div className="logoBox4">
-          <a
+          <Link
             href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5"
             target="_blank"
           >
@@ -160,61 +161,61 @@ const Intro = () => {
               style={{ fontSize: "4rem" }}
               className="icon2"
             />
-          </a>
+          </Link>
         </div>
 
         <div className="logoBox5">
-          <a href="https://vuejs.org/" target="_blank">
+          <Link href="https://vuejs.org/" target="_blank">
             <IonIcon
               icon={logoVue}
               style={{ fontSize: "4rem" }}
               className="icon1"
             />
-          </a>
+          </Link>
         </div>
 
         <div className="logoBox6">
-          <a href="https://www.python.org/" target="_blank">
+          <Link href="https://www.python.org/" target="_blank">
             <IonIcon
               icon={logoPython}
               style={{ fontSize: "4rem" }}
               className="icon2"
             />
-          </a>
+          </Link>
         </div>
 
         <div className="logoBox7">
-          <a href="https://react.dev/" target="_blank">
+          <Link href="https://react.dev/" target="_blank">
             <IonIcon
               icon={logoReact}
               style={{ fontSize: "4rem" }}
               className="icon1"
             />
-          </a>
+          </Link>
         </div>
 
         <div className="logoBox8">
-          <a href="https://vercel.com/" target="_blank">
+          <Link href="https://vercel.com/" target="_blank">
             <IonIcon
               icon={logoVercel}
               style={{ fontSize: "4rem" }}
               className="icon2"
             />
-          </a>
+          </Link>
         </div>
 
         <div className="logoBox9">
-          <a href="https://angular.io/" target="_blank">
+          <Link href="https://angular.io/" target="_blank">
             <IonIcon
               icon={logoAngular}
               style={{ fontSize: "4rem" }}
               className="icon1"
             />
-          </a>
+          </Link>
         </div>
 
         <div className="logoBox10">
-          <a
+          <Link
             href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
             target="_blank"
           >
@@ -223,7 +224,7 @@ const Intro = () => {
               style={{ fontSize: "4rem" }}
               className="icon2"
             />
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -241,23 +242,23 @@ const Intro = () => {
           className={`pContent ${i18n.language.substring(0, 2) === "zh" && "add1"}`}
         >
           {t("Hii! I am a high school student currently studying in")}{" "}
-          <a
+          <Link
             href="https://biph.basischina.com/#/home?lang=en"
             target="_blank"
             className="underline toWeb"
           >
             {t("Basis International School Park Lane Harbor")}
-          </a>{" "}
+          </Link>{" "}
           {t("in Huizhou, China. I've completed 4 AP classes (")}
-          <a
+          <Link
             href="https://apcentral.collegeboard.org/courses"
             target="_blank"
             className="underline toWeb"
           >
             {t("AP Macro and Microeconomics, AP World History, AP Physics 1")}
-          </a>
+          </Link>
           {t("), and I am studying 4 more AP classes (")}
-          <a
+          <Link
             href="https://apcentral.collegeboard.org/courses"
             target="_blank"
             className="underline toWeb"
@@ -265,7 +266,7 @@ const Intro = () => {
             {t(
               "AP Calculus AB, AP Computer Science A, AP European History, AP Physics 2",
             )}
-          </a>
+          </Link>
           {t(").")}
         </p>
         <p
@@ -288,7 +289,7 @@ const Intro = () => {
       </div>
       <div className="links">
         <div className="link-grid">
-          <a
+          <Link
             href="https://github.com/LQ458"
             target="_blank"
             className="link-item1"
@@ -297,30 +298,30 @@ const Intro = () => {
             <p className="link-description">
               {t("Find me through github by clicking this tab (LQ458).")}
             </p>
-          </a>
+          </Link>
 
-          <a href="/notes" className="link-item2">
+          <Link href="/notes" className="link-item2">
             <h2 className="link-title">{t("LQ Notes")}</h2>
             <p className="link-description">
               {t("Find in-depth information about me and my studing notes.")}
             </p>
-          </a>
+          </Link>
 
-          <a href="/news" className="link-item1">
+          <Link href="/news" className="link-item1">
             <h2 className="link-title">{t("News")}</h2>
             <p className="link-description">
               {t(
                 "Always catch up with my latest projects and development news.",
               )}
             </p>
-          </a>
+          </Link>
 
-          <a href="/life" className="link-item2">
+          <Link href="/life" className="link-item2">
             <h2 className="link-title">{t("LQ Life")}</h2>
             <p className="link-description">
               {t("Find more interesting aspects about me in this block.")}
             </p>
-          </a>
+          </Link>
         </div>
       </div>
       <footer>
@@ -382,7 +383,7 @@ const Intro = () => {
           </div>
         </form>
       </footer>
-    </body>
+    </main>
   );
 };
 

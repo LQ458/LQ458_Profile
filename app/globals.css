@@ -1,6 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url(https://fonts.googleapis.com/css2?family=Righteous&display=swap);
+
+* {
+  font-family: "Poppins", sans-serif;
+}
 
 :root {
   --purple-lightest: #f3efff;

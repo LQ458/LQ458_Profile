@@ -1,0 +1,79 @@
+:root {
+  --border-color: #e5e5e5;
+}
+div.navbar {
+  height: 4rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  border-bottom: 1px solid var(--border-color);
+}
+div.navSig {
+  font-size: 3rem;
+  display: inline-flex;
+  color: var(--y-light);
+}
+button.searchBtn {
+  font-size: 1.5rem;
+  display: flex;
+  color: grey;
+  align-items: center;
+  flex-direction: row;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.5s;
+}
+button.searchBtn:hover {
+  color: black;
+  transition: color 0.5s;
+}
+button.searchBtn:hover > div {
+  color: var(--y-darkest);
+  border-color: var(--y-darkest);
+  transition:
+    color 0.5s,
+    border-color 0.5s;
+}
+
+button.searchBtn p {
+  font-size: 0.9rem;
+  font-weight: 300;
+  margin-left: 2px;
+  margin-right: 5px;
+}
+
+button.searchBtn div {
+  font-size: 0.9rem;
+  position: relative;
+  font-weight: 300;
+  color: rgba(128, 128, 128, 0.626);
+  border: 1px solid rgba(128, 128, 128, 0.626);
+  padding: 1px 10px 1px 10px;
+  border-radius: 4px;
+  transition:
+    color 0.5s,
+    border-color 0.5s;
+}
+
+div.searchDiv {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1000;
+  transform: translate(-50%, -50%);
+}
+
+div.greyBG {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(128, 128, 128, 0.263);
+}

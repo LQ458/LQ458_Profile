@@ -52,6 +52,7 @@ i18n
           "Any Problems?*": "任何问题？*",
           "Leave a Message...*": "留言...*",
           Send: "发送",
+          search: "搜索",
         },
       },
       es: {

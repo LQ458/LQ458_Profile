@@ -1,0 +1,16 @@
+:root {
+  --y-lightest: #ffffe0;
+  --y-lighter: #ffff00;
+  --y-light: #ffd700;
+  --y: #ffa500;
+  --y-dark: #ff8c00;
+  --y-darker: #ff7f50;
+  --y-darkest: #ff6347;
+  --p-lightest: #e6e6fa;
+  --p-lighter: #d8bfd8;
+  --p-light: #dda0dd;
+  --p: #ee82ee;
+  --p-dark: #da70d6;
+  --p-darker: #ff00ff;
+  --p-darkest: #ba55d3;
+}
