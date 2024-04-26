@@ -139,13 +139,6 @@ const Navbar = () => {
             >
               {t("Wharton Investing")}
             </Link>
-            <Link
-              href="https://github.com/LQ458/Sigma_Investing_Sourcecodes"
-              target="_blank"
-              className="projectLinks"
-            >
-              {t("Wharton Investing")}
-            </Link>
           </div>
         </button>
         <Link href="#" className="toPlay">
@@ -155,6 +148,9 @@ const Navbar = () => {
         <button className="projectBtn">
           <p style={{ fontSize: "0.9rem" }}>{t("Docs")}</p>
           <IoIosArrowDown />
+        </button>
+        <button className="themeBtn">
+          <p style={{ fontSize: "0.9rem" }}>API</p>
         </button>
         <button className="themeBtn">
           <p style={{ fontSize: "0.9rem" }}>{t("Theme")}</p>

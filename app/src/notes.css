@@ -15,6 +15,10 @@
   --p-darkest: #ba55d3;
   --h1-font-size: 1.2rem;
   --h2-font-size: 0.9rem;
+  --h2-color: rgba(60, 60, 60, 0.7);
+  --h1-color: #213547;
+  --border-color-2: #e7e7e7;
+  --hover-color: #a1a1a1d3;
 }
 
 section.notes {
@@ -27,7 +31,9 @@ section.notes {
 
 div.noteLeft {
   display: inline-flex;
-  position: relative;
+  position: absolute;
+  left: 0;
+  top: 0;
   flex-direction: column;
   align-items: flex-end;
   width: 20%;
@@ -36,13 +42,17 @@ div.noteLeft {
 div.noteRight {
   display: inline-flex;
   position: relative;
+  flex-direction: row;
+  margin-left: 20%;
   width: 80%;
 }
 
 main.notes {
   position: absolute;
   top: 0;
+  width: 100%;
   left: 0;
+  box-sizing: border-box;
 }
 
 div.noteLeft div {
@@ -55,16 +65,29 @@ div.noteLeft div {
 
 div.noteLeft div > h1 {
   font-size: var(--h1-font-size);
-  font-weight: 500;
+  color: var(--h1-color);
+  font-weight: 600;
   margin: 0;
 }
 
-div.noteLeft div > h2 {
+div.noteLeft div h2 {
   font-size: var(--h2-font-size);
   font-weight: 300;
   cursor: pointer;
   margin: 0;
   padding: 0.3rem 0 0.3rem 0;
+  transition: color 0.3s;
+}
+
+div.noteLeft div h2 a {
+  color: var(--h2-color);
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+div.noteLeft div h2 a:hover {
+  color: black;
+  transition: color 0.3s;
 }
 
 div.noteLeft div div {
@@ -73,4 +96,67 @@ div.noteLeft div div {
   gap: 0.4rem;
   position: relative;
   flex-direction: column;
+}
+
+div.left {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 70%;
+  margin: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+div.leftOne {
+  border-bottom: 1px solid var(--border-color-2);
+  padding-bottom: 0.5rem;
+}
+
+div.right {
+  position: relative;
+  width: 30%;
+}
+
+div.noteRight div div > h1 {
+  color: #213547;
+}
+
+ul.doc {
+  margin-left: -1vw;
+  position: relative;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+}
+
+ul.doc li a {
+  color: black;
+  text-decoration: none;
+}
+
+ul.doc li a {
+  transition: color 0.3s;
+}
+
+ul.doc li {
+  transition: color 0.3s;
+}
+
+ul.doc li:hover > a {
+  color: var(--hover-color);
+  transition: color 0.3s;
+}
+
+div.techStack {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+ul.ap {
+  margin-left: -1vw;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
