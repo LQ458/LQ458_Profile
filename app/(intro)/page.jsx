@@ -23,7 +23,6 @@ import {
   logoVercel,
 } from "ionicons/icons";
 import "../src/intro.css";
-import { set } from "mongoose";
 
 const Intro = () => {
   const formRef = useRef();
@@ -276,7 +275,7 @@ const Intro = () => {
             "I am a self-taught programmer who mainly focuses on web development for now. I've already built several full-stack web applications using frontend framework such as",
           )}{" "}
           <span className="underline">{t("React, Vue, Angular")}</span>
-          {t(", and backend framework such as")}
+          {t(", and backend framework such as")}{" "}
           <span className="underline">{t("Express and nodejs")}</span>
           {t(
             ". I am also familiar with other programming languages such as",

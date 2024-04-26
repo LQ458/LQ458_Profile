@@ -1,9 +1,12 @@
 :root {
   --border-color: #e5e5e5;
+  --hover-color: #a1a1a1d3;
 }
 div.navbar {
-  height: 4rem;
+  height: 60px;
   position: fixed;
+  z-index: 10000;
+  background-color: white;
   top: 0;
   left: 0;
   width: 100vw;
@@ -13,10 +16,16 @@ div.navbar {
   flex-direction: row;
   border-bottom: 1px solid var(--border-color);
 }
-div.navSig {
+.navSig {
   font-size: 3rem;
   display: inline-flex;
   color: var(--y-light);
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.navSig:hover {
+  color: var(--y-darker);
+  transition: color 0.3s;
 }
 button.searchBtn {
   font-size: 1.5rem;
@@ -76,4 +85,141 @@ div.greyBG {
   width: 100vw;
   height: 100vh;
   background-color: rgba(128, 128, 128, 0.263);
+}
+
+button.languageBtn {
+  position: relative;
+  display: inline-flex;
+  font-size: 1.2rem;
+  border-left: 1.5px solid var(--border-color);
+  border-right: 1.5px solid var(--border-color);
+  border-top: none;
+  border-bottom: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+button.projectBtn {
+  background-color: transparent;
+  position: relative;
+  border: none;
+  gap: 3px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.3s;
+}
+
+button.projectBtn:hover {
+  color: var(--hover-color);
+  transition: color 0.3s;
+}
+
+button.projectBtn div {
+  flex-direction: column;
+  position: absolute;
+  top: 80%;
+  width: 12rem;
+  right: 0;
+  font-size: 1rem;
+  background-color: white;
+  box-shadow:
+    0 12px 32px rgba(0, 0, 0, 0.1),
+    0 2px 6px rgba(0, 0, 0, 0.08);
+  padding: 1rem;
+  gap: 0.5rem;
+  text-align: left;
+  border-radius: 8px;
+  display: flex;
+  transition:
+    opacity 0.3s,
+    visibility 0.3s;
+}
+
+.ori {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.fadeIn {
+  animation: fadeIn 0.3s ease-out;
+  opacity: 1;
+  visibility: visible;
+}
+
+.fadeOut {
+  animation: fadeOut 0.3s ease-out;
+  opacity: 0;
+  visibility: hidden;
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: translateY(-8px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+
+.projectLinks {
+  color: black;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.projectLinks:hover {
+  color: var(--y);
+  transition: color 0.2s;
+}
+
+.toPlay {
+  gap: 3px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+.toPlay {
+  color: black;
+  text-decoration: none;
+}
+
+div.navRight {
+  display: inline-flex;
+  position: relative;
+  gap: 24px;
+  align-items: center;
+  margin-left: 14vw;
+}
+div.navLeft {
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  margin-right: 20vw;
+  gap: 14px;
+}
+
+button.themeBtn {
+  background-color: transparent;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
 }

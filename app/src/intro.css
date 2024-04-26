@@ -81,10 +81,11 @@ footer {
   transition: 0.5s;
   transform: scale(1.15);
 }
-.inp {
+input.inp {
   padding: 0.3rem 0 0.3rem 1.2rem;
   font-size: 1.2rem;
   outline: none;
+  border: none;
   border-radius: 25px;
   box-shadow: 2px 2px 3px var(--yellow-darker);
 }
@@ -97,17 +98,21 @@ footer {
 button.sub {
   top: 1.5rem;
   position: relative;
+  display: flex;
   color: var(--purple-darker);
   font-size: 1.2rem;
   height: 2.5rem;
   width: 7rem;
   align-items: center;
+  justify-content: center;
   background-color: var(--purple-lighter);
   padding: 0 2rem 0 2rem;
   border-radius: 40px;
+  border: none;
+  cursor: pointer;
   left: 2vw;
 }
-.loader {
+div.loader {
   align-items: center;
   text-align: center;
   display: flex;
@@ -179,8 +184,9 @@ div.header-container {
   left: 3vw;
   top: 1.5rem;
 }
-a.link-item1 {
+.link-item1 {
   display: flex;
+  text-decoration: none;
   color: var(--yellow-dark);
   font-size: 3rem;
   flex-direction: column;
@@ -192,12 +198,13 @@ a.link-item1 {
   border-radius: 5px;
   transition: background-color 0.5s;
 }
-a.link-item1:hover {
+.link-item1:hover {
   background-color: var(--purple-darkest);
   transition: background-color 0.5s;
 }
-a.link-item2 {
+.link-item2 {
   display: flex;
+  text-decoration: none;
   color: var(--yellow-dark);
   margin-right: 1vw;
   font-size: 3rem;
@@ -209,7 +216,7 @@ a.link-item2 {
   border-radius: 5px;
   transition: background-color 0.5s;
 }
-a.link-item2:hover {
+.link-item2:hover {
   background-color: var(--purple-light);
   transition: background-color 0.5s;
 }
@@ -370,8 +377,11 @@ div.bg1 {
   font-weight: 300;
   font-family: "ZCOOL QingKe HuangYou", sans-serif;
 }
-a.toWeb:hover {
+.toWeb:hover {
   text-decoration: none;
+}
+.toWeb {
+  color: var(--purple-darker);
 }
 .add1 {
   font-weight: 100;
