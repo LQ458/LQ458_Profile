@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import React from "react";
 import { useEffect, useState } from "react";
@@ -30,7 +31,7 @@ const Notes = () => {
             <h1>{t("Start")}</h1>
             <div>
               <h2>
-                <a href="#introduction">{t("Introduction")}</a>
+                <a href="#intro">{t("Introduction")}</a>
               </h2>
               <h2>
                 <a href="#preview">{t("Preview")}</a>
@@ -54,8 +55,12 @@ const Notes = () => {
         </div>
         <div className="noteRight">
           <div className="left">
-            <div id="introduction" className="leftOnes">
+            <div className="leftOnes">
               <div className="leftOne">
+                <a
+                  name="intro"
+                  style={{ position: "absolute", top: "-77px" }}
+                />
                 <h1>{t("Introduction")}</h1>
               </div>
               <div className="leftOne">
@@ -146,6 +151,39 @@ const Notes = () => {
                       {t("AP European History:")} {t("Pending")}
                     </li>
                   </ul>
+                </div>
+              </div>
+            </div>
+            <div className="leftOnes">
+              <div className="leftOne">
+                <a
+                  name="preview"
+                  style={{ position: "absolute", top: "-77px" }}
+                />
+                <h1>{t("Preview")}</h1>
+              </div>
+              <div className="leftOne">
+                <h1>{t("Github Stats")}</h1>
+                <img
+                  src="https://camo.githubusercontent.com/6469f83beba11a5dcadee51853551b130c3fb07da3516e5c2ea069388ee67427/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170693f757365726e616d653d6c7134353826636f756e745f707269766174653d747275652673686f775f69636f6e733d74727565267468656d653d7261646963616c"
+                  alt="stats"
+                />
+              </div>
+              <div className="leftOne">
+                <h1>{t("Recent Projects")}</h1>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "1rem",
+                  }}
+                >
+                  <a href="#oasisOverview" className="projectPre">
+                    {t("Oasis Forum")}
+                  </a>
+                  <a href="#floraOverview" className="projectPre">
+                    {t("BIPH Flora")}
+                  </a>
                 </div>
               </div>
             </div>

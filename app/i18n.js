@@ -78,6 +78,9 @@ i18n
           "AP Physics 2:": "AP物理2：",
           "AP European History:": "AP欧洲历史：",
           Pending: "待定",
+          "Github Stats": "Github指标",
+          "Recent Projects": "近期项目",
+          "BIPH Flora": "BIPH 识草木",
         },
       },
       es: {
