@@ -67,6 +67,7 @@ div.noteLeft div > h1 {
   font-size: var(--h1-font-size);
   color: var(--h1-color);
   font-weight: 600;
+  cursor: pointer;
   margin: 0;
 }
 
@@ -171,4 +172,9 @@ a.projectPre {
 a.projectPre:hover {
   color: var(--hover-color);
   transition: color 0.3s;
+}
+
+div.leftOne h2 {
+  font-size: 1.3rem;
+  font-weight: 500;
 }

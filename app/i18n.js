@@ -52,6 +52,7 @@ i18n
           "Any Problems?*": "任何问题？*",
           "Leave a Message...*": "留言...*",
           Send: "发送",
+
           search: "搜索",
           Projects: "项目",
           Docs: "文档",
@@ -81,6 +82,8 @@ i18n
           "Github Stats": "Github指标",
           "Recent Projects": "近期项目",
           "BIPH Flora": "BIPH 识草木",
+          "Oasis forum is a community-driven platform that encourages open discussions, fosters learning, and promotes respectful interactions. We believe in the power of diverse perspectives and the value of constructive contributions. Our guidelines are designed to ensure a safe and inclusive environment for everyone.":
+            "绿洲论坛是一个以社区为驱动的平台，鼓励开放讨论，促进学习，并促进尊重的互动。我们相信多元化观点的力量和建设性贡献的价值。我们的准则旨在确保每个人都有一个安全和包容的环境。",
         },
       },
       es: {
