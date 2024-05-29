@@ -10,7 +10,17 @@ import Navbar from "../../components/navbar.jsx";
 const Notes = () => {
   const { t } = useTranslation();
   const { i18n } = useTranslation();
-  const [current, setCurrent] = useState("start");
+  const current = sessionStorage.getItem("current") || "start";
+  let lastCurrent = sessionStorage.getItem("current");
+
+  const setCurrent = (current) => {
+    if (current !== lastCurrent) {
+      sessionStorage.setItem("current", current);
+      lastCurrent = current;
+    }
+  };
+  const [hover1, setHover1] = useState(false);
+  const [hover2, setHover2] = useState(false);
   const language = i18n.language.substring(0, 2); // get language from i18n
   // Pull info(language) from localStorage
   useEffect(() => {
@@ -27,34 +37,71 @@ const Notes = () => {
       <Navbar />
       <section className="notes">
         <div className="noteLeft">
+          {/* Start */}
           <div>
-            <h1 onClick={() => setCurrent("start")}>{t("Start")}</h1>
+            <div
+              onMouseEnter={() => setHover1(true)}
+              onMouseLeave={() => setHover1(false)}
+              onClick={() => setCurrent("start")}
+              style={{ position: "relative", padding: "0", cursor: "pointer" }}
+            >
+              <p
+                className={`hoverIcon ${current === "start" && "fix"} ${hover1 ? "hover1" : "hover2"}`}
+              >
+                #
+              </p>
+              <h1>{t("Start")}</h1>
+            </div>
             <div>
               <h2>
-                <a href="#intro">{t("Introduction")}</a>
+                <a href="#intro" onClick={() => setCurrent("start")}>
+                  {t("Introduction")}
+                </a>
               </h2>
               <h2>
-                <a href="#preview">{t("Preview")}</a>
+                <a href="#preview" onClick={() => setCurrent("start")}>
+                  {t("Preview")}
+                </a>
               </h2>
             </div>
           </div>
+          {/* oasisforum */}
           <div>
-            <h1 onClick={() => setCurrent("oasis")}>{t("Oasis Forum")}</h1>
+            <div
+              onMouseEnter={() => setHover2(true)}
+              onMouseLeave={() => setHover2(false)}
+              onClick={() => setCurrent("oasis")}
+              style={{ position: "relative", padding: "0", cursor: "pointer" }}
+            >
+              <p
+                className={`hoverIcon ${current === "oasis" && "fix"} ${hover2 ? "hover1" : "hover2"}`}
+              >
+                #
+              </p>
+              <h1>{t("Oasis Forum")}</h1>
+            </div>
             <div>
               <h2>
-                <a href="#oasisOverview">{t("Overview")}</a>
+                <a href="#oasisOverview" onClick={() => setCurrent("oasis")}>
+                  {t("Overview")}
+                </a>
               </h2>
               <h2>
-                <a href="#oasisTechUse">{t("Tech Used")}</a>
+                <a href="#oasisTechUse" onClick={() => setCurrent("oasis")}>
+                  {t("Tech Used")}
+                </a>
               </h2>
               <h2>
-                <a href="#oasisFeatures">{t("Features")}</a>
+                <a href="#oasisFeatures" onClick={() => setCurrent("oasis")}>
+                  {t("Features")}
+                </a>
               </h2>
             </div>
           </div>
         </div>
         <div className="noteRight">
           <div className="left">
+            {/* start */}
             {current === "start" && (
               <>
                 <div className="leftOnes">
@@ -191,6 +238,7 @@ const Notes = () => {
                 </div>
               </>
             )}
+            {/* oasis */}
             {current === "oasis" && (
               <>
                 <div className="leftOnes">
@@ -208,11 +256,17 @@ const Notes = () => {
                   </div>
                   <div className="leftOne">
                     <h1>{t("Tech Used")}</h1>
-                    <p>{t("OasisTechUse")}</p>
+                    <p>
+                      {t(
+                        "This website is build using nextjs + expressjs, with mongodb as its database.",
+                      )}
+                    </p>
                   </div>
                   <div className="leftOne">
                     <h1>{t("Features")}</h1>
-                    <p>{t("OasisFeatures")}</p>
+                    <li>{t("Share posts and view posts collections")}</li>
+                    <li>{t("Account management system with avatars")}</li>
+                    <li>{t("Like and comment on posts")}</li>
                   </div>
                 </div>
               </>
