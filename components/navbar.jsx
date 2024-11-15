@@ -18,6 +18,7 @@ const Navbar = () => {
   // Pull info(language) from localStorage
   const [searchDispaly, setSearchDisplay] = useState(false);
   const [showProject, setShowProject] = useState("loading");
+  const [langDisplay, setLangDisplay] = useState("loading");
   const ref = useRef();
 
   useEffect(() => {
@@ -31,7 +32,8 @@ const Navbar = () => {
   }, [i18n]);
 
   const changeLanguage = (event) => {
-    const selectedLanguage = event.target.value;
+    const selectedLanguage = event.target.dataset.value;
+    console.log(selectedLanguage);
     i18n.changeLanguage(selectedLanguage);
     localStorage.setItem("language", selectedLanguage);
   };
@@ -88,8 +90,31 @@ const Navbar = () => {
           <p>{t("search")}</p>
           <div>/</div>
         </button>
-        <button className="languageBtn">
+        <button
+          className="languageBtn"
+          onMouseLeave={() => setLangDisplay("hide")}
+          onMouseEnter={() => setLangDisplay("open")}
+        >
           <IoLanguageOutline />
+          <div
+            className={`langDiv absolute flex-col flex bg-white w-[12rem] rounded-[8px] p-[1rem] gap-[0.5rem] ${langDisplay === "open" && "fadeIn"} ${langDisplay === "hide" && "fadeOut"} ${langDisplay === "loading" && "ori"}`}
+          >
+            <div className="langChoice" onClick={changeLanguage} data-value="en">
+              English
+            </div>
+            <div className="langChoice" onClick={changeLanguage} data-value="zh">
+              中文
+            </div>
+            <div className="langChoice" onClick={changeLanguage} data-value="es">
+              Español
+            </div>
+            <div className="langChoice" onClick={changeLanguage} data-value="fr">
+              Français
+            </div>
+            <div className="langChoice" onClick={changeLanguage} data-value="ja">
+              日本語
+            </div>
+          </div>
         </button>
       </div>
       {searchDispaly && (

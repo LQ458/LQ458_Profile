@@ -91,6 +91,9 @@ button.languageBtn {
   position: relative;
   display: inline-flex;
   font-size: 1.2rem;
+  width: 2rem;
+  justify-content: center;
+  align-items: center;
   border-left: 1.5px solid var(--border-color);
   border-right: 1.5px solid var(--border-color);
   border-top: none;
@@ -135,6 +138,15 @@ button.projectBtn div {
   transition:
     opacity 0.3s,
     visibility 0.3s;
+}
+
+div.langDiv {
+  top: 100%;
+  left: calc(100% - 2rem);
+  box-shadow:
+    0 12px 32px rgba(0, 0, 0, 0.1),
+    0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: visibility 0.3s, opacity 0.3s;
 }
 
 .ori {
@@ -222,4 +234,8 @@ button.themeBtn {
   cursor: pointer;
   display: inline-flex;
   align-items: center;
+}
+
+div.langChoice {
+  @apply bg-transparent border-none cursor-pointer text-left text-[1rem] hover:text-[--y] transition-colors duration-300;
 }

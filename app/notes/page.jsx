@@ -10,19 +10,34 @@ import Navbar from "../../components/navbar.jsx";
 const Notes = () => {
   const { t } = useTranslation();
   const { i18n } = useTranslation();
-  const current = sessionStorage.getItem("current") || "start";
-  let lastCurrent = sessionStorage.getItem("current");
-
-  const setCurrent = (current) => {
-    if (current !== lastCurrent) {
-      sessionStorage.setItem("current", current);
-      lastCurrent = current;
-    }
-  };
+  const [current, setCurrent] = useState("start");
+  let [lastCurrent, setLastCurrent] = useState(null);
   const [hover1, setHover1] = useState(false);
   const [hover2, setHover2] = useState(false);
   const language = i18n.language.substring(0, 2); // get language from i18n
   // Pull info(language) from localStorage
+
+  useEffect(() => {
+    const storedCurrent =
+      typeof sessionStorage !== "undefined"
+        ? sessionStorage.getItem("current")
+        : null;
+    if (storedCurrent) {
+      setCurrent(storedCurrent);
+      setLastCurrent(storedCurrent);
+    }
+  }, []);
+
+  const handleSetCurrent = (newCurrent) => {
+    if (newCurrent !== lastCurrent) {
+      setCurrent(newCurrent);
+      setLastCurrent(newCurrent);
+      if (typeof sessionStorage !== "undefined") {
+        sessionStorage.setItem("current", newCurrent);
+      }
+    }
+  };
+
   useEffect(() => {
     if (!localStorage.getItem("language")) {
       localStorage.setItem("language", navigator.language.substring(0, 2));
@@ -42,7 +57,7 @@ const Notes = () => {
             <div
               onMouseEnter={() => setHover1(true)}
               onMouseLeave={() => setHover1(false)}
-              onClick={() => setCurrent("start")}
+              onClick={() => handleSetCurrent("start")}
               style={{ position: "relative", padding: "0", cursor: "pointer" }}
             >
               <p
@@ -54,12 +69,12 @@ const Notes = () => {
             </div>
             <div>
               <h2>
-                <a href="#intro" onClick={() => setCurrent("start")}>
+                <a href="#intro" onClick={() => handleSetCurrent("start")}>
                   {t("Introduction")}
                 </a>
               </h2>
               <h2>
-                <a href="#preview" onClick={() => setCurrent("start")}>
+                <a href="#preview" onClick={() => handleSetCurrent("start")}>
                   {t("Preview")}
                 </a>
               </h2>
@@ -70,7 +85,7 @@ const Notes = () => {
             <div
               onMouseEnter={() => setHover2(true)}
               onMouseLeave={() => setHover2(false)}
-              onClick={() => setCurrent("oasis")}
+              onClick={() => handleSetCurrent("oasis")}
               style={{ position: "relative", padding: "0", cursor: "pointer" }}
             >
               <p
@@ -82,17 +97,26 @@ const Notes = () => {
             </div>
             <div>
               <h2>
-                <a href="#oasisOverview" onClick={() => setCurrent("oasis")}>
+                <a
+                  href="#oasisOverview"
+                  onClick={() => handleSetCurrent("oasis")}
+                >
                   {t("Overview")}
                 </a>
               </h2>
               <h2>
-                <a href="#oasisTechUse" onClick={() => setCurrent("oasis")}>
+                <a
+                  href="#oasisTechUse"
+                  onClick={() => handleSetCurrent("oasis")}
+                >
                   {t("Tech Used")}
                 </a>
               </h2>
               <h2>
-                <a href="#oasisFeatures" onClick={() => setCurrent("oasis")}>
+                <a
+                  href="#oasisFeatures"
+                  onClick={() => handleSetCurrent("oasis")}
+                >
                   {t("Features")}
                 </a>
               </h2>
@@ -227,7 +251,7 @@ const Notes = () => {
                         gap: "1rem",
                       }}
                     >
-                      <a href="#oasisOverview" className="projectPre">
+                      <a style={{cursor: "pointer"}} onClick={() => handleSetCurrent("oasis")} className="projectPre">
                         {t("Oasis Forum")}
                       </a>
                       <a href="#floraOverview" className="projectPre">
